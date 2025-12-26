@@ -11,7 +11,7 @@ export default function Newsletter() {
 
 
   return (
-     <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-12 md:py-16">
+     <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-12 md:py-16 lg:w-[1200px] lg:ml-50">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-white text-center md:text-left">

@@ -19,10 +19,14 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Desktop Nav */}
             <nav className="hidden lg:flex gap-8 text-white text-sm ">
-              <Link href="#" className="flex items-center gap-2 hover:text-orange-400">
+              
+              <Link href="/flights" className="flex items-center gap-2 hover:text-orange-400">
                 <Plane size={16} /> Find Flight
               </Link>
-              <Link href="#" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="/attractions" className="flex items-center gap-2 hover:text-orange-400">
+                <Plane size={16} /> Attractions
+              </Link>
+              <Link href="/find-stays" className="flex items-center gap-2 hover:text-orange-400">
                 <Hotel size={16} /> Find Stays
               </Link>
               <Link href="#" className="flex items-center gap-2 hover:text-orange-400">
@@ -31,6 +35,7 @@ export default function Header() {
             </nav>
 
             {/* Logo */}
+            <div className="lg:mr-60">
             <Link href="/">
               <Image
                 src="/travel-logo.png"
@@ -40,6 +45,7 @@ export default function Header() {
                 priority
               />
             </Link>
+            </div>
 
             {/* Right Buttons */}
             <div className="flex gap-4 items-center">
@@ -69,9 +75,9 @@ export default function Header() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <nav className="lg:hidden mt-4 bg-black/40 backdrop-blur-md rounded-xl p-5 text-white flex flex-col gap-4">
-              <Link href="#" className="flex gap-2"><Plane size={16} /> Find Flight</Link>
-              <Link href="#" className="flex gap-2"><Hotel size={16} /> Find Stays</Link>
-              <Link href="#" className="flex gap-2"><Car size={16} /> Airport Taxi</Link>
+              <Link href="/" className="flex gap-2"><Plane size={16} /> Find Flight</Link>
+              <Link href="/find-stays" className="flex gap-2"><Hotel size={16} /> Find Stays</Link>
+              <Link href="/airport-taxi" className="flex gap-2"><Car size={16} /> Airport Taxi</Link>
 
               <div className="pt-3 border-t border-white/20 flex flex-col gap-2">
                 <button

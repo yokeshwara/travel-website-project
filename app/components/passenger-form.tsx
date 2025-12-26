@@ -7,9 +7,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { PenSquare, CheckSquare, ChevronDown, Plus } from "lucide-react"
+import SeatSelectionModal from "../components/SeatSelectionModal";
 
 export function PassengerForm() {
   const [expanded, setExpanded] = useState<number>(1)
+  const [openSeats, setOpenSeats] = useState(false);
+
 
   return (
     <div className="space-y-6">
@@ -209,7 +212,7 @@ export function PassengerForm() {
       <Card className="p-0 border-none bg-secondary overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
-            <img src="/london-big-ben-sunset.jpg" alt="London" className="w-full h-full object-cover" />
+            <img src="/passenger-details-image.png" alt="London" className="w-full h-full object-cover" />
           </div>
           <div className="md:w-2/3 p-6 flex items-center">
             <div className="flex items-center justify-between w-full gap-4">
@@ -244,10 +247,21 @@ export function PassengerForm() {
 
       {/* Select Seats Button */}
       <div className="flex justify-center pt-4">
-        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12">
+        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12"  onClick={() => setOpenSeats(true)}>
           Select Your Seats
         </Button>
       </div>
+      <SeatSelectionModal
+  open={openSeats}
+  onClose={() => setOpenSeats(false)}
+    onContinue={() => {
+   
+    setOpenSeats(true); // next step (seat modal)
+  }}
+/>
+
     </div>
+
+    
   )
 }

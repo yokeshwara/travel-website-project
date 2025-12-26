@@ -12,6 +12,7 @@ import {
   Minus,
 } from "lucide-react";
 import DatePicker from "@/app/DatePicker";
+import Link from "next/link";
 
 export default function HeroSection() {
   const router = useRouter();
@@ -67,12 +68,15 @@ export default function HeroSection() {
     <div className="relative mt-[420px] w-[95%] max-w-6xl bg-white rounded-2xl shadow-xl p-6 lg:absolute lg:mt-0 lg:top-[580px]">
           {/* Tabs */}
           <div className="flex gap-8 border-b mb-6">
-            <button className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
+            <Link href="/flights" className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
               <Plane size={18} /> Flights
-            </button>
-            <button className="flex items-center gap-2 pb-3 text-gray-500">
+            </Link>
+            <Link href="/find-stays" className="flex items-center gap-2 pb-3 text-gray-500">
               <Bed size={18} /> Stays
-            </button>
+            </Link>
+              <Link href="/attractions" className="flex items-center gap-2 pb-3 text-gray-500">
+              <Plane size={18} /> Attractions
+            </Link>
           </div>
 
           {/* Fields */}
