@@ -33,7 +33,7 @@ const hotels = [
 
 export default function PopularHotels() {
   return (
-    <section className="py-12 lg:py-20 bg-accent/30">
+    <section className="py-12 lg:py-1 bg-accent/30">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">

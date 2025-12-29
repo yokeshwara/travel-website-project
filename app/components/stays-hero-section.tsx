@@ -75,7 +75,7 @@ export default function StaysHeroSection() {
               <Bed size={18} /> Stays
             </Link>
 
-               <Link href="/flights" className="flex items-center gap-2 pb-3 text-gray-600 hover:text-primary transition">
+               <Link href="/" className="flex items-center gap-2 pb-3 text-gray-600 hover:text-primary transition">
               <Plane size={18} /> Flights
             </Link>
 

@@ -68,7 +68,7 @@ export default function HeroSection() {
     <div className="relative mt-[420px] w-[95%] max-w-6xl bg-white rounded-2xl shadow-xl p-6 lg:absolute lg:mt-0 lg:top-[580px]">
           {/* Tabs */}
           <div className="flex gap-8 border-b mb-6">
-            <Link href="/flights" className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
+            <Link href="/" className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
               <Plane size={18} /> Flights
             </Link>
             <Link href="/find-stays" className="flex items-center gap-2 pb-3 text-gray-500">

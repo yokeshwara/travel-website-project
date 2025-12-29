@@ -25,7 +25,7 @@ const stats = [
 
 export default function Statistics() {
   return (
-    <section className="py-12 lg:py-16 bg-accent/30">
+    <section className="py-12 lg:py-2 bg-accent/30">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (

@@ -2,22 +2,70 @@
 import { Footer } from "@/app/components/footer"
 import NewHeader from "@/app/components/new-header"
 import Newsletter from "@/app/components/newsletter"
-import { Star, MapPin, Heart, Share2, Check, MapPinIcon, ChevronDown, Users, Utensils } from "lucide-react"
+import { Star, MapPin, Heart, Share2, Check, MapPinIcon, ChevronDown, Users, Utensils, ChevronRight, Camera, ShoppingBag, Martini, Search } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-
+import {
+  Accessibility,
+  ParkingSquare,
+  Wifi,
+  Building2,
+  Waves,
+  Car,
+  HeartPulse,
+  Umbrella,
+  Bell,
+  User,
+  Gamepad2,
+  CheckCheckIcon
+} from "lucide-react"
+import Image from "next/image"
 export default function HotelDetailsPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
+   const [showAll, setShowAll] = useState(false)
+
+
+
 
   const tabs = ["Overview", "Popular", "Location", "Media", "Reviews"]
 
+  const ratingData = [
+  { label: "Good value", value: 4.4 },
+  { label: "Facilities", value: 4.2 },
+  { label: "Quality of service", value: 4.4 },
+  { label: "Ease of access", value: 4.5 },
+  ]
+
+  const instructions = [
+  "Extra-person charges may apply and vary depending on property policy",
+  "Government-issued photo identification and a credit card, debit card, or cash deposit may be required at check-in for incidental charges",
+  "Special requests are subject to availability upon check-in and may incur additional charges; special requests cannot be guaranteed",
+  "The name on the credit card used at check-in to pay for incidentals must be the primary name on the guestroom reservation",
+  "Guests must contact this property in advance to reserve cribs/infant beds and rollaway/extra beds",
+  "This property accepts credit cards, debit cards, and cash",
+  "Safety features at this property include a fire extinguisher and a first aid kit",
+  "This property affirms that it follows the cleaning and disinfection practices of ALLSAFE (Accor Hotels)",
+  "Please note that cultural norms and guest policies may differ by country and by property; the policies listed are provided by the property",
+  "Safety features at this property include a fire extinguisher and a first aid kit",
+]
+
+  const visibleItems = showAll ? instructions : instructions.slice(0, 7)
   const amenities = [
     { icon: "🏊", label: "Swimming", info: "Good" },
     { icon: "🍽️", label: "Restaurant", info: "Excellent" },
     { icon: "🎉", label: "Fun & Games", info: "Very Good" },
     { icon: "🏋️", label: "Sports", info: "Good" },
   ]
+
+  const nearbyLocations = [
+  { name: "Da Gama", distance: "4 minutes" },
+  { name: "Iris Village", distance: "4 minutes" },
+  { name: "Da Gama", distance: "4 minutes" },
+  { name: "Iris Village", distance: "4 minutes" },
+  { name: "Da Gama", distance: "4 minutes" },
+  { name: "Iris Village", distance: "4 minutes" },
+]
 
    const router = useRouter();
       const bookNow = () => {
@@ -114,48 +162,107 @@ export default function HotelDetailsPage() {
     { icon: "🍸", score: 9.6, label: "Superb", category: "Nightlife" },
   ]
 
-  const facilities = [
-    ["Free WiFi", "Air Conditioning", "Room Service", "Parking"],
-    ["Swimming Pool", "Fitness Center", "Spa & Wellness", "Restaurant"],
-    ["Business Center", "Conference Rooms", "Concierge", "Laundry Service"],
-    ["24/7 Security", "Safe Box", "Reception", "Doctor on Call"],
-  ]
+const facilities = [
+  {
+    title: "Accessibility",
+    icon: Accessibility,
+    items: ["Wheelchair-accessible", "Lift access"],
+  },
+  {
+    title: "Internet",
+    icon: Wifi,
+    items: ["Wi-fi"],
+  },
+  {
+    title: "Conveniences",
+    icon: Building2,
+    items: [
+      "Air conditioning in public areas",
+      "Hotel safe",
+      "Currency exchange facilities",
+      "Shop",
+    ],
+  },
+  {
+    title: "Pool",
+    icon: Waves,
+    items: ["Outdoor freshwater pool"],
+  },
+  {
+    title: "Parking",
+    icon: ParkingSquare,
+    items: ["Car park"],
+  },
+  {
+    title: "Transportation",
+    icon: Car,
+    items: ["Car hire", "Airport Shuttle"],
+  },
+  {
+    title: "Wellness",
+    icon: HeartPulse,
+    items: [
+      "Gym",
+      "Sauna",
+      "Steam bath",
+      "Hot tub",
+      "Massage",
+      "Hairdressing salon",
+      "Beauty salon",
+      "Spa centre",
+      "Fitness",
+    ],
+  },
+  {
+    title: "Outdoors",
+    icon: Umbrella,
+    items: ["Sun loungers", "Parasols"],
+  },
+  {
+    title: "Guest Services",
+    icon: Bell,
+    items: [
+      "24-hour reception",
+      "Check-in hour",
+      "Check-out hour",
+      "Room service",
+      "Laundry service",
+      "Medical service",
+      "Multilingual staff",
+      "Bellboy service",
+    ],
+  },
+  {
+    title: "Family friendly",
+    icon: User,
+    items: ["Babysitting service", "Children playground"],
+  },
+  {
+    title: "Things to do",
+    icon: Gamepad2,
+    items: ["Nightclub", "Squash", "Golf", "Tennis", "Badminton"],
+  },
+]
 
-  const reviews = [
-    {
-      id: 1,
-      rating: 8.0,
-      label: "Excellent",
-      category: "Cleanliness",
-      author: "John David",
-      date: "2 months ago",
-      text: "Wonderful stay at this amazing hotel. The staff were very helpful and the rooms were spotless.",
-      verified: true,
-      helpful: 23,
-    },
-    {
-      id: 2,
-      rating: 9.0,
-      label: "Excellent",
-      category: "Service",
-      author: "Sarah Johnson",
-      date: "3 months ago",
-      text: "Outstanding experience! Everything was perfect from check-in to check-out.",
-      verified: true,
-      helpful: 45,
-    },
-    {
-      id: 3,
-      rating: 8.5,
-      label: "Very Good",
-      category: "Value for Money",
-      author: "Michael Chen",
-      date: "1 month ago",
-      text: "Loved the location and the facilities are top-notch. Highly recommended!",
-      verified: true,
-      helpful: 12,
-    },
-  ]
+const reviews = [
+  {
+    name: "Rholindah",
+    country: "Uganda",
+    avatar: "/profile1.png", // replace with real image
+    text: "Superb experience with luxurious accommodations and attentive staff. Highly recommend for comfortable getaway",
+    visit: "Visited with a partner or spouse",
+    date: "Posted 12 January 2024 on Booking.com",
+  },
+  {
+    name: "Danisa",
+    country: "Zimbabwe",
+    avatar: "/profile2.png", // replace with real image
+    text: "Superb experience with luxurious accommodations and attentive staff. Highly recommend for comfortable getaway",
+    visit: "Visited with family",
+    date: "Posted 28 December 2023 on Booking.com",
+  },
+]
+
 
   const faqs = [
     {
@@ -181,6 +288,34 @@ export default function HotelDetailsPage() {
       answer: "Cancellations made 48 hours before arrival are eligible for a full refund.",
     },
   ]
+
+  const ratings = [
+  {
+    score: "8.4",
+    title: "Very good",
+    category: "Sightseeing",
+    icon: Camera,
+  },
+  {
+    score: "9.6",
+    title: "Superb",
+    category: "Eating",
+    icon: Utensils,
+  },
+  {
+    score: "7.4",
+    title: "Good",
+    category: "Shopping",
+    icon: ShoppingBag,
+  },
+  {
+    score: "9.6",
+    title: "Superb",
+    category: "Nightlife",
+    icon: Martini,
+  },
+]
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -270,28 +405,50 @@ export default function HotelDetailsPage() {
       </div> */}
 
        {/* Location Ratings Section - New section with location ratings matching design */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-b border-gray-200">
-        <div className="flex items-center gap-2 mb-6">
-          <MapPin size={20} className="text-green-600" />
-          <h2 className="text-xl font-bold text-gray-900">Superb location for Eating!</h2>
-        </div>
-        <p className="text-sm text-gray-500 mb-6">Based on 130,476 interactions by locals and travellers</p>
+          <div className="max-w-7xl mx-auto px-4 py-6 border-b border-gray-200">
+      <div className="flex items-center gap-2 mb-2">
+        <MapPin size={16} className="text-green-600" />
+        <h2 className="text-sm font-semibold text-gray-900">
+          Superb location for Eating!
+        </h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {locationRatings.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="relative w-24 h-24 mb-4 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border-4 border-green-500"></div>
-                <div className="z-10 text-center">
-                  <div className="text-2xl font-bold text-gray-900">{item.score}</div>
+      <p className="text-xs text-gray-500 mb-5">
+        Based on 130,476 interactions by locals and travellers
+      </p>
+
+      {/* Ratings row */}
+      <div className="flex flex-wrap gap-x-8 gap-y-6">
+        {ratings.map((item, index) => {
+          const Icon = item.icon
+
+          return (
+            <div
+              key={index}
+              className="flex items-center gap-3 min-w-[160px]"
+            >
+              {/* Dotted circle */}
+              <div className="relative h-12 w-12 flex items-center justify-center rounded-full border-2 border-dashed border-green-600">
+                <span className="text-sm font-bold text-gray-900">
+                  {item.score}
+                </span>
+              </div>
+
+              {/* Text */}
+              <div>
+                <p className="text-xs font-semibold text-green-600">
+                  {item.title}
+                </p>
+                <div className="flex items-center gap-1 text-xs text-gray-700">
+                  <Icon size={12} className="text-green-600" />
+                  <span>{item.category}</span>
                 </div>
               </div>
-              <div className="text-sm font-semibold text-green-600 mb-1">{item.label}</div>
-              <div className="text-sm text-gray-700">{item.category}</div>
             </div>
-          ))}
+          )
+        })}
         </div>
-      </div>
+        </div>
 
       {/* Check-in/Checkout/Guests Inputs Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-y border-gray-200 bg-gray-50">
@@ -343,11 +500,11 @@ export default function HotelDetailsPage() {
 
                 <div className="space-y-2 text-sm text-gray-700">
                   <div className="flex items-center gap-2">
-                    <Users size={16} />
+                    <User size={16} />
                     <span>{room.guests}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Check size={16} className="text-green-600" />
+                    <CheckCheckIcon size={16} className="text-green-600" />
                     <span>{room.accessibility}</span>
                   </div>
                 </div>
@@ -421,190 +578,299 @@ export default function HotelDetailsPage() {
       </div>
 
       {/* Facilities Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Facilities</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {facilities.flat().map((facility, index) => (
-            <div key={index} className="flex items-center gap-2 text-gray-700">
-              <Check size={20} className="text-green-600 flex-shrink-0" />
-              <span>{facility}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+     <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      <h2 className="text-xl font-bold text-gray-900 mb-8">
+        Facilities
+      </h2>
 
-      {/* Location Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Location</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <MapPinIcon className="text-blue-600 flex-shrink-0 mt-1" size={20} />
-              <div>
-                <p className="font-semibold text-gray-900">Al Bustan</p>
-                <p className="text-gray-600">Dubai, UAE</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+        {facilities.map((section) => {
+          const Icon = section.icon
+
+          return (
+            <div key={section.title}>
+              {/* Category title */}
+              <div className="flex items-center gap-2 mb-3">
+                <Icon size={18} className="text-gray-700" />
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {section.title}
+                </h3>
               </div>
+
+              {/* Items */}
+              <ul className="space-y-2">
+                {section.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <Check
+                      size={14}
+                      className="text-gray-400 mt-0.5 flex-shrink-0"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="space-y-2 text-sm text-gray-600">
-              <p>
-                <span className="font-semibold">Distance from Airport:</span> 25 km
-              </p>
-              <p>
-                <span className="font-semibold">Distance from City Center:</span> 10 km
-              </p>
-              <p>
-                <span className="font-semibold">Distance from Beach:</span> 15 km
-              </p>
+          )
+        })}
+      </div>
+    </div>
+      {/* Location Section */}
+  \<div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      {/* Title */}
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        Location
+      </h2>
+
+      {/* Main layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* LEFT SIDE */}
+        <div>
+          {/* Header row */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <MapPin size={16} className="text-green-600" />
+              <span className="text-sm font-semibold text-green-600">
+                Nearby Top Locations
+              </span>
             </div>
+
+            <span className="text-sm text-gray-500">
+              Walk / Distance
+            </span>
           </div>
-          <div className="">
+
+          {/* List */}
+          <ul className="space-y-3">
+            {nearbyLocations.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-center justify-between text-sm text-gray-700"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
+                  <span>{item.name}</span>
+                </div>
+
+                <span className="text-gray-600">
+                  {item.distance}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* RIGHT SIDE – MAP */}
+       <div className="">
             <div className="text-center">
               <img
         src="/map.png"   
         alt="Hotel Location Map"
         className="w-full h-full object-cover"
       />
-              
-            </div>
-          </div>
+      </div>
         </div>
       </div>
+    </div>
 
       {/* Description Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Description of the Accommodation</h2>
         <p className="text-gray-700 leading-relaxed">
-          Manarat Grand Al Bustan Dubai is a luxurious five-star hotel located in the heart of Dubai's finest
-          neighborhood. With stunning architecture and world-class amenities, this hotel offers an unforgettable
-          experience. The property features 250 elegantly appointed rooms and suites, each with modern conveniences and
-          premium furnishings. Our guests enjoy access to multiple restaurants, bars, a state-of-the-art fitness center,
-          and a luxurious spa.
+           This hotel is located on Casablanca Road in the Al Garhoud district, just 5 minutes from Dubai International Airport. The hotel is only a few minutes away from Dubai Creek Golf and Yacht Club, Dubai. The hotel's restaurants provide a wide selection of cuisine created by their award-winning master chefs, from Thai and Italian to Lebanese. The luxury hotel offers a nightclub, a café and a bar. In addition guests canfind the very best conference facilities and services available. Alternatively guests can simply relax with a host of recreational activities. Car park is available for those arriving by car.The rooms and suites are spacious and very comfortable. Each room comes with an en suite bathroom. All of them are well-equipped as standard.There is a swimming pool and paddling pool in the grounds. Guests can relax in the  hot tub, work out in the gym, or play tennis golf and squash.
         </p>
+       <br></br>
+          <h2 className="text-1xl font-bold text-gray-900 mb-4">Amenities</h2>
+     <p className="text-gray-700 leading-relaxed">
+          Pamper yourself with a visit to the spa, which offers massages. You can take advantage of recreational amenities such as a health club, an outdoor pool, and a sauna. Additional amenities at this hotel include complimentary wireless Internet access, concierge services, and gift shops/newsstands.
+        </p>
+      
+       
       </div>
 
       {/* Check-in and Important Information */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Check-in and important information</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left side - Basic info */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Earliest check-in</h3>
-              <p className="text-gray-600 text-sm">From 2:00 PM</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Strict checkout</h3>
-              <p className="text-gray-600 text-sm">By 11:00 AM</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3">Special check-in instructions</h3>
-              <p className="text-gray-600 text-sm">Contact the property for detailed arrival instructions</p>
-            </div>
-          </div>
+    <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      {/* Title */}
+      <h2 className="text-xl font-bold text-gray-900 mb-6">
+        Checkin and important information
+      </h2>
 
-          {/* Right side - Requirements */}
-          <div className="space-y-3">
-            {[
-              "Valid photo ID required at check-in",
-              "Guests can request a late checkout - subject to availability for a charge",
-              "Early checkout allowed on request",
-              "Gate/lock code provided to guests",
-            ].map((rule, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
-                <Check size={16} className="text-green-600 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700">{rule}</span>
-              </div>
-            ))}
-          </div>
+      {/* Content */}
+      <div className="space-y-6 text-sm text-gray-600">
+        {/* Check-in */}
+        <div>
+          <p className="font-semibold text-gray-900 mb-1">
+            Check-In
+          </p>
+          <p>Checkin time 2:00 PM – 12:00 PM</p>
+          <p>Minimum check-in age: 18</p>
+        </div>
+
+        {/* Check-out */}
+        <div>
+          <p className="font-semibold text-gray-900 mb-1">
+            Check-Out
+          </p>
+          <p>Checkout time 12:00 PM</p>
         </div>
       </div>
+    </div>
+
+     <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      {/* Title */}
+      <h2 className="text-xl font-bold text-gray-900 mb-6">
+        Instructions
+      </h2>
+
+      {/* List */}
+      <ul className="space-y-4">
+        {visibleItems.map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            {/* Blue bullet */}
+            <span className="mt-1 h-3 w-3 rounded-full border-2 border-blue-600 flex-shrink-0" />
+            
+            {/* Text */}
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {item}
+            </p>
+          </li>
+        ))}
+      </ul>
+
+      {/* Show more */}
+      {instructions.length > 7 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-6 flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          <span>{showAll ? "Show less" : "Show more"}</span>
+          <ChevronDown
+            size={16}
+            className={`transition-transform ${
+              showAll ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+      )}
+    </div>
 
       {/* Reviews Section - Completely redesigned with score-based layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Guest Reviews</h2>
+    <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      {/* Header */}
+      <h2 className="text-xl font-bold text-gray-900 mb-4">
+        User ratings
+      </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          {/* Overall Rating Card */}
-          <div className="lg:col-span-1">
-            <div className="bg-blue-50 rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
-              <div className="text-5xl font-bold text-blue-600 mb-2">8.5</div>
-              <div className="text-sm font-semibold text-gray-700 mb-2">Excellent</div>
-              <p className="text-xs text-gray-600">Based on 2,847 reviews</p>
-              <div className="flex justify-center mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
+      {/* Overall rating */}
+      <div className="flex items-center gap-3 mb-6">
+        <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+        <span className="text-lg font-bold text-gray-900">8.4</span>
+        <span className="text-sm font-semibold text-gray-700">
+          Fabulous
+        </span>
+        <span className="text-sm text-gray-500">
+          (1694 reviews)
+        </span>
+        <a
+          href="#"
+          className="ml-4 text-sm font-medium text-blue-600 hover:underline"
+        >
+          See all reviews
+        </a>
+      </div>
+
+      {/* Rating bars */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+        {ratingData.map((item) => (
+          <div key={item.label}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-gray-800">
+                {item.label}
+              </span>
+              <span className="text-sm font-semibold text-gray-800">
+                {item.value}
+              </span>
+            </div>
+
+            {/* Progress bar */}
+            <div className="w-full h-2 bg-gray-200 rounded-full">
+              <div
+                className="h-2 bg-orange-500 rounded-full"
+                style={{ width: `${(item.value / 5) * 100}%` }}
+              />
             </div>
           </div>
+        ))}
+      </div>
+    </div>
 
-          {/* Category Ratings */}
-          <div className="lg:col-span-2">
-            <div className="space-y-4">
-              {reviews.map((review) => (
-                <div key={review.id} className="flex items-center justify-between pb-4 border-b border-gray-200">
-                  <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">{review.category}</h3>
-                    <p className="text-xs text-gray-600 mt-1">by {review.author}</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-gray-900">{review.rating}</div>
-                      <div className="text-xs text-gray-600">{review.label}</div>
-                    </div>
-                    <div className="relative w-16 h-16 flex items-center justify-center">
-                      <div className="absolute inset-0 rounded-full border-2 border-green-500"></div>
-                      <span className="text-sm font-bold text-green-600">{review.rating}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xl font-bold text-gray-900">
+          What guests loved most
+        </h2>
+        <a
+          href="#"
+          className="text-sm font-medium text-blue-600 hover:underline"
+        >
+          See all reviews
+        </a>
+      </div>
 
-        {/* Individual Reviews */}
-        <h3 className="text-lg font-bold text-gray-900 mb-4">What guests loved the most</h3>
-        <div className="space-y-4">
-          {reviews.map((review) => (
-            <div key={review.id} className="border border-gray-200 rounded-lg p-6">
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={14}
-                          className={i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm font-semibold text-gray-900">{review.rating}</span>
-                    {review.verified && (
-                      <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-semibold">
-                        Verified
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-sm">{review.category}</h3>
-                </div>
-                <div className="text-right">
-                  <p className="text-xs text-gray-600 font-semibold">{review.author}</p>
-                  <p className="text-xs text-gray-500">{review.date}</p>
+      {/* Reviews */}
+      <div className="relative">
+        <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className="min-w-[280px] max-w-sm flex-shrink-0 rounded-lg border border-gray-200 p-4 bg-white"
+            >
+              {/* User */}
+              <div className="flex items-center gap-3 mb-3">
+                <Image
+                  src={review.avatar}
+                  alt={review.name}
+                  width={36}
+                  height={36}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">
+                    {review.name}
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {review.country}
+                  </p>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed">{review.text}</p>
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <button className="text-blue-600 text-xs font-semibold hover:underline">
-                  Helpful? ({review.helpful})
-                </button>
-              </div>
+
+              {/* Review text */}
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                {review.text}
+              </p>
+
+              {/* Visit type */}
+              <p className="text-xs text-gray-500 mb-1">
+                {review.visit}
+              </p>
+
+              {/* Date */}
+              <p className="text-[11px] text-gray-400">
+                {review.date}
+              </p>
             </div>
           ))}
         </div>
-      </div>
 
+        {/* Right arrow (desktop hint like screenshot) */}
+        <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full border border-gray-300 bg-white shadow">
+          <ChevronRight size={16} className="text-gray-600" />
+        </div>
+      </div>
+    </div>
       {/* FAQ Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
@@ -630,6 +896,42 @@ export default function HotelDetailsPage() {
           ))}
         </div>
       </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+      <div className="w-full max-w-3xl text-left">
+        {/* Heading */}
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+          Looking for specific information?
+        </h2>
+
+        {/* Subtitle */}
+        <p className="mt-1 text-sm text-gray-500">
+          Search product info, FAQs, reviews
+        </p>
+
+        {/* Search box */}
+        <div className="relative mt-6">
+          <Search
+            size={18}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+          <input
+            type="text"
+            placeholder="Type a keyword"
+            className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-11 pr-4 text-sm
+            focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+        </div>
+
+        {/* Feedback */}
+        <div className="mt-6 flex items-center justify-center gap-2 text-sm">
+          <span className="text-gray-500">Want to suggest something?</span>
+          <button className="rounded-md border border-blue-500 px-3 py-1 text-blue-600 hover:bg-blue-50 transition">
+            Leave feedback
+          </button>
+        </div>
+      </div>
+    </div>
 
       {/* Newsletter Section */}
       <Newsletter/>

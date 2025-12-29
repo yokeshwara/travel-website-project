@@ -19,7 +19,7 @@ export default function StaysHeader() {
           <div className="flex items-center justify-between">
             {/* Desktop Nav */}
             <nav className="hidden lg:flex gap-8 text-white text-sm ">
-              <Link href="#" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="/" className="flex items-center gap-2 hover:text-orange-400">
                 <Plane size={16} /> Find Flight
               </Link>
                <Link href="#" className="flex items-center gap-2 hover:text-orange-400">

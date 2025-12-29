@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Star, MapPin, Share2, ChevronDown, ChevronUp } from "lucide-react"
+import { Star, MapPin, Share2, ChevronDown, ChevronUp, Languages, Search, Info, Check } from "lucide-react"
 import NewHeader from "@/app/components/new-header"
 import Newsletter from "@/app/components/newsletter"
 import { Footer } from "@/app/components/footer"
@@ -50,6 +50,15 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
       question: "What should I get on the actual trip?",
       answer: "Wear comfortable clothes, sunscreen, and closed-toe shoes.",
     },
+  ]
+
+    const languages = ["Arabic", "English (UK)"];
+
+      const ratingData = [
+  { label: "Good value", value: 4.4 },
+  { label: "Facilities", value: 4.2 },
+  { label: "Quality of service", value: 4.4 },
+  { label: "Ease of access", value: 4.5 },
   ]
 
        const router = useRouter();
@@ -106,29 +115,23 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
           {/* Left Content - Images and Details */}
           <div className="lg:col-span-2">
             {/* Main Image with Thumbnail Grid */}
-            <div className="grid grid-cols-4 gap-3 mb-8">
-              {/* Main Image - 2x2 */}
-              <div className="col-span-2 row-span-2">
-                <div className="relative w-full h-72 sm:h-96 rounded-lg overflow-hidden bg-gray-200">
-                  <Image
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
-                    alt="Main attraction image"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Thumbnail Grid - 2 columns, 2 rows */}
-              {attraction.images.thumbnails.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="col-span-1 relative w-full h-20 sm:h-24 rounded-lg overflow-hidden bg-gray-200 cursor-pointer hover:opacity-80 transition-opacity"
-                >
-                  <Image src={img || "/placeholder.svg"} alt={`Thumbnail ${idx + 1}`} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="md:col-span-2">
+            <img
+              src="/desert1.png"
+              alt="Hotel corridor"
+              className="w-full h-64 md:h-96 object-cover rounded-lg"
+            />
+          </div>
+          <div className="grid grid-cols-2  md:col-span-2">
+            <img src="/desert2.png" alt="Bedroom" className="w-full h-32 md:h-44 object-cover rounded-lg" />
+            <img src="/desert3.png" alt="Lobby" className="w-full h-32 md:h-44 object-cover rounded-lg" />
+            <img src="/desert4.png" alt="Lounge" className="w-full h-32 md:h-44 object-cover rounded-lg" />
+            <img src="/desert5.png" alt="Dining" className="w-full h-32 md:h-44 object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
 
             {/* Free Cancellation Badge */}
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
@@ -198,8 +201,18 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
               </div>
             </div>
 
+
+            <div className="bg-blue-50  p-6 mb-8">
+              <h3 className="font-bold text-lg mb-4">Accessibility</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Accessible to pushchairs/prams</li>
+                <li>• Service animals welcome</li>
+                <li>• Infant seats available</li>
+            </ul>
+            </div>
+
             {/* Health & Safety */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+            <div className="bg-blue-50  p-6 mb-8">
               <h3 className="font-bold text-lg mb-4">Health & safety</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Not recommended for pregnant women</li>
@@ -216,16 +229,47 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             </div>
 
             {/* Languages */}
-            <div className="mb-8">
-              <h3 className="font-bold text-lg mb-4">Languages spoken by guide</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Arabic", "English"].map((lang) => (
-                  <span key={lang} className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700">
-                    {lang}
-                  </span>
-                ))}
-              </div>
-            </div>
+            
+             <div className="mb-8">
+      {/* Heading */}
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        Languages spoken by guide
+      </h3>
+
+      {/* Language pills */}
+      <div className="flex flex-wrap gap-3">
+        {languages.map((lang) => (
+          <div
+            key={lang}
+            className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2
+                       text-sm text-gray-800 bg-white"
+          >
+            <Languages size={16} className="text-gray-600" />
+            <span>{lang}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+     <div className="w-full max-w-3xl lg:pb-10">
+      {/* Title */}
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        Additional information
+      </h3>
+
+      {/* Content */}
+      <div className="space-y-3 text-gray-700 text-sm leading-relaxed">
+        <p>This tour is also offered in Hindu and Urdu languages.</p>
+        <p>Please bring your ticket with you to the attraction.</p>
+        <p>
+          Be aware that operators may cancel for unforeseen reasons.
+        </p>
+        <p>
+          You need to be 18 years or older to book or be accompanied by an adult.
+        </p>
+        <p>Operated by Dubai Desert Ride</p>
+      </div>
+    </div>
 
             {/* Location Map */}
             <div className="mb-8">
@@ -256,37 +300,55 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             </div>
 
             {/* User Reviews */}
-            <div className="mb-8">
-              <h3 className="font-bold text-2xl mb-6">User ratings</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { rating: 4.7, label: "Tour Cleanliness", reviews: 234 },
-                  { rating: 4.6, label: "Tour times", reviews: 234 },
-                  { rating: 4.3, label: "Quality of service", reviews: 234 },
-                  { rating: 4.8, label: "Kind of food", reviews: 234 },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-4">
-                    <div>
-                      <div className="flex items-center gap-1">
-                        <span className="font-bold text-lg">{item.rating}</span>
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              size={14}
-                              className={
-                                i < Math.floor(item.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-                              }
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-600">{item.reviews} reviews</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+             <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+               {/* Header */}
+               <h2 className="text-xl font-bold text-gray-900 mb-4">
+                 User ratings
+               </h2>
+         
+               {/* Overall rating */}
+               <div className="flex items-center gap-3 mb-6">
+                 <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                 <span className="text-lg font-bold text-gray-900">8.4</span>
+                 <span className="text-sm font-semibold text-gray-700">
+                   Fabulous
+                 </span>
+                 <span className="text-sm text-gray-500">
+                   (1694 reviews)
+                 </span>
+                 <a
+                   href="#"
+                   className="ml-4 text-sm font-medium text-blue-600 hover:underline"
+                 >
+                   See all reviews
+                 </a>
+               </div>
+         
+               {/* Rating bars */}
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                 {ratingData.map((item) => (
+                   <div key={item.label}>
+                     <div className="flex items-center justify-between mb-2">
+                       <span className="text-sm text-gray-800">
+                         {item.label}
+                       </span>
+                       <span className="text-sm font-semibold text-gray-800">
+                         {item.value}
+                       </span>
+                     </div>
+         
+                     {/* Progress bar */}
+                     <div className="w-full h-2 bg-gray-200 rounded-full">
+                       <div
+                         className="h-2 bg-orange-500 rounded-full"
+                         style={{ width: `${(item.value / 5) * 100}%` }}
+                       />
+                     </div>
+                   </div>
+                 ))}
+               </div>
+             </div>
+         
 
             {/* What Guests Loved Most */}
             <div className="mb-8">
@@ -354,99 +416,162 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
           </div>
 
           {/* Right Sidebar - Booking Form */}
-          <div className="lg:col-span-1">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-lg mb-6">Tickets and prices</h3>
+           <div className="lg:col-span-1">
+      <div className="top-24 rounded-xl border border-gray-200 bg-white p-6">
+        {/* Title */}
+        <h3 className="text-lg font-semibold mb-4">Tickets and prices</h3>
 
-              {/* Date Selection */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-900 mb-2">
-                  Search ticket availability by date
-                </label>
-                <input
-                  type="date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <p className="text-xs text-gray-500 mt-2">Min Date - (4 Dec 27)</p>
-              </div>
+        {/* Date section */}
+        <p className="text-sm font-medium text-gray-900 mb-2">
+          Search ticket availability by date
+        </p>
+        <button className="text-sm text-blue-600 mb-4">Show more dates</button>
 
-              {/* Time Selection */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Select time</label>
-                <select
-                  value={selectedTime}
-                  onChange={(e) => setSelectedTime(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">Select a time</option>
-                  <option value="3pm">3:00 PM</option>
-                  <option value="4pm">4:00 PM</option>
-                  <option value="5pm">5:00 PM</option>
-                </select>
-              </div>
-
-              {/* Quantity Selection */}
-              <div className="mb-6 space-y-3">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">Adults</label>
-                  <div className="flex items-center border border-gray-300 rounded-lg">
-                    <button onClick={() => setAdults(Math.max(1, adults - 1))} className="px-3 py-2 hover:bg-gray-100">
-                      −
-                    </button>
-                    <span className="flex-1 text-center py-2">{adults}</span>
-                    <button onClick={() => setAdults(adults + 1)} className="px-3 py-2 hover:bg-gray-100">
-                      +
-                    </button>
-                  </div>
+        {/* Date cards */}
+        <div className="flex items-center gap-3 mb-6 overflow-x-auto">
+          {[
+            { day: "Sat", date: "07", label: "Today", active: false },
+            { day: "Sun", date: "08", label: "Tomorrow", active: true },
+            { day: "Mon", date: "09", label: "", active: false },
+            { day: "Tue", date: "10", label: "", active: false },
+          ].map((d) => (
+            <div
+              key={d.date}
+              className={`min-w-[72px] rounded-lg border text-center px-3 py-2 text-sm
+                ${
+                  d.active
+                    ? "border-blue-600 text-blue-600"
+                    : "border-gray-200 text-gray-600"
+                }`}
+            >
+              <div className="text-xs">{d.day}</div>
+              <div className="text-lg font-semibold">{d.date}</div>
+              <div className="text-xs">Nov</div>
+              {d.label && (
+                <div className="mt-1 rounded bg-blue-600 text-white text-[11px]">
+                  {d.label}
                 </div>
+              )}
+            </div>
+          ))}
+        </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">Children</label>
-                  <div className="flex items-center border border-gray-300 rounded-lg">
-                    <button
-                      onClick={() => setChildren(Math.max(0, children - 1))}
-                      className="px-3 py-2 hover:bg-gray-100"
-                    >
-                      −
-                    </button>
-                    <span className="flex-1 text-center py-2">{children}</span>
-                    <button onClick={() => setChildren(children + 1)} className="px-3 py-2 hover:bg-gray-100">
-                      +
-                    </button>
-                  </div>
-                </div>
+        {/* Time */}
+        <p className="text-sm font-medium mb-2">Select time</p>
+        <button className="mb-6 rounded-full border border-blue-600 px-6 py-2 text-sm font-medium text-blue-600">
+          14:00
+        </button>
+
+        {/* Booking card */}
+        <div className="rounded-xl border-2 border-blue-600 p-4 space-y-4">
+          <p className="text-sm font-semibold">
+            Dubai Desert Safari, Dune Bashing, Camel Ride, Sandboarding & BBQ
+          </p>
+
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Info size={16} />
+            Non-refundable
+          </div>
+
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Check size={16} />
+            Pickup included
+          </div>
+
+          {/* Language */}
+          <div>
+            <p className="text-sm font-medium mb-1">Language options</p>
+            <select className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm">
+              <option>English - Tour guide</option>
+            </select>
+          </div>
+
+          {/* Tickets */}
+          <div>
+            <p className="text-sm font-medium mb-3">How many tickets?</p>
+
+            {/* Adults */}
+            <div className="flex justify-between items-center mb-3">
+              <div>
+                <p className="text-sm font-medium">Adults</p>
+                <p className="text-xs text-gray-500">Aged 11 to 65</p>
               </div>
-
-              {/* Tour Details */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-700 mb-2">
-                  <strong>Dubai Desert Safari, Dune Bashing, Camel Ride, Barbecue, Entertainment & Dinner</strong>
-                </p>
-                <div className="space-y-1 text-xs text-gray-600">
-                  <p>✓ Free cancellation available</p>
-                  <p>✓ Mobile e-ticket accepted</p>
-                </div>
+              <div className="flex items-center gap-4">
+                <button onClick={() => setAdults(adults - 1)}>-</button>
+                <span className="font-medium">{adults}</span>
+                <button onClick={() => setAdults(adults + 1)}>+</button>
               </div>
+            </div>
 
-              {/* Price Section */}
-              <div className="mb-6 border-t border-gray-200 pt-4">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-gray-700">Total price</span>
-                  <span className="text-2xl font-bold text-gray-900">USD {attraction.price}</span>
-                </div>
-                <p className="text-xs text-gray-500">Includes all taxes and charges</p>
+            {/* Children */}
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm font-medium">Children</p>
+                <p className="text-xs text-gray-500">Aged 0 to 11</p>
               </div>
-
-              {/* Book Button */}
-              <button onClick={clickNext} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
-                Next
-              </button>
+              <div className="flex items-center gap-4">
+                <button onClick={() => setChildren(children - 1)}>-</button>
+                <span className="font-medium">{children}</span>
+                <button onClick={() => setChildren(children + 1)}>+</button>
+              </div>
             </div>
           </div>
+
+          {/* Total */}
+          <div className="pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-500">Total</p>
+            <p className="text-lg font-semibold">US$145</p>
+            <p className="text-xs text-gray-500">
+              Includes taxes and charges
+            </p>
+          </div>
+
+          {/* CTA */}
+          <button className="w-full rounded-lg bg-blue-600 py-3 text-white font-semibold hover:bg-blue-700 transition">
+            Next
+          </button>
         </div>
       </div>
+    </div>
+  
+        </div>
+      </div>
+
+           <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
+            <div className="w-full max-w-3xl text-left">
+              {/* Heading */}
+              <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+                Looking for specific information?
+              </h2>
+      
+              {/* Subtitle */}
+              <p className="mt-1 text-sm text-gray-500">
+                Search product info, FAQs, reviews
+              </p>
+      
+              {/* Search box */}
+              <div className="relative mt-6">
+                <Search
+                  size={18}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                />
+                <input
+                  type="text"
+                  placeholder="Type a keyword"
+                  className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-11 pr-4 text-sm
+                  focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                />
+              </div>
+      
+              {/* Feedback */}
+              <div className="mt-6 flex items-center justify-center gap-2 text-sm">
+                <span className="text-gray-500">Want to suggest something?</span>
+                <button className="rounded-md border border-blue-500 px-3 py-1 text-blue-600 hover:bg-blue-50 transition">
+                  Leave feedback
+                </button>
+              </div>
+            </div>
+          </div>
       <Newsletter/>
       <Footer/>
     </div>
