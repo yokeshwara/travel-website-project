@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Plane, ChevronDown, ChevronUp } from "lucide-react"
 import NewHeader from "../components/new-header"
 import { Footer } from "../components/footer"
-import Newsletter from "../components/newsletter"
+
 import { useRouter } from "next/navigation";
+import { Newsletter } from "../components/newsletter"
 // Seat types
 type SeatType = "extra-legroom" | "preferred" | "standard" | "occupied" | "selected"
 

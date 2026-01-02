@@ -1,10 +1,11 @@
 
 
 import Image from "next/image"
-import Newsletter from "../components/newsletter"
+
 import Header from "../components/header"
 import { Footer } from "../components/footer"
 import { BookingCard } from "../components/visa-booking-card"
+import { Newsletter } from "../components/newsletter"
 
 export default function Visa() {
   return (

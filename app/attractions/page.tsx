@@ -8,7 +8,8 @@ import Services from "../components/attractions-services"
 import SignUpSection from "../components/attractions-signup"
 import { Footer } from "../components/footer"
 import Header from "../components/header"
-import Newsletter from "../components/newsletter"
+import { Newsletter } from "../components/newsletter"
+
 import TravelBlog from "../components/travel-blog"
 
 export const metadata = {

@@ -1,6 +1,7 @@
 
 import { Footer } from "../components/footer"
-import Newsletter from "../components/newsletter"
+import { Newsletter } from "../components/newsletter"
+
 import  {PassengerForm}  from "../components/passenger-form"
 import { TripSummary } from "../components/trip-summary"
 

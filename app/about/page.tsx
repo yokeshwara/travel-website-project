@@ -12,8 +12,9 @@ import Header from "../components/header"
 
 
 import { HeroSection } from "../components/hero"
-import Newsletter from "../components/newsletter"
+
 import { Footer } from "../components/footer"
+import { Newsletter } from "../components/newsletter"
 
 
 export default function AboutPage() {

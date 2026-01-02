@@ -5,9 +5,10 @@
 import { useState } from "react"
 import { ChevronDown, MapPin, Star, Mail, Phone, MapPinIcon, CheckCircle2 } from "lucide-react"
 import { Footer } from "../components/footer"
-import Newsletter from "../components/newsletter"
+
 import { useRouter } from "next/navigation"
 import NewHeader from "../components/new-header"
+import { Newsletter } from "../components/newsletter"
 
 export default function AttractionGuestDetailsPage() {
   const [expandGuest2, setExpandGuest2] = useState(false)

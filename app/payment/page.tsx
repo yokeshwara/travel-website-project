@@ -8,10 +8,11 @@ import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Plane, Building, Car, Facebook, Twitter, Youtube, Instagram } from "lucide-react"
 import { Footer } from "../components/footer"
-import Newsletter from "../components/newsletter"
+
 import NewHeader from "../components/new-header"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { Newsletter } from "../components/newsletter"
 
 export default function PaymentPage() {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("")

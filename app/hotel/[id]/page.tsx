@@ -1,7 +1,7 @@
 "use client"
 import { Footer } from "@/app/components/footer"
 import NewHeader from "@/app/components/new-header"
-import Newsletter from "@/app/components/newsletter"
+
 import { Star, MapPin, Heart, Share2, Check, MapPinIcon, ChevronDown, Users, Utensils, ChevronRight, Camera, ShoppingBag, Martini, Search } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -20,6 +20,7 @@ import {
   CheckCheckIcon
 } from "lucide-react"
 import Image from "next/image"
+import { Newsletter } from "@/app/components/newsletter"
 export default function HotelDetailsPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)

@@ -18,9 +18,10 @@ import {
   Mail,
 } from "lucide-react"
 import { Footer } from "../components/footer"
-import Newsletter from "../components/newsletter"
+
 import NewHeader from "../components/new-header"
 import { useRouter } from "next/navigation"
+import { Newsletter } from "../components/newsletter"
 
 export default function TravelBooking() {
   const [purchaseConditionsOpen, setPurchaseConditionsOpen] = useState(false)

@@ -1,13 +1,14 @@
 
 import { Suspense } from "react"
 import NewHeader from "../components/new-header"
-import Newsletter from "../components/newsletter"
+
 import { Footer } from "../components/footer"
 import VisaScreenHero1 from "../components/visa-screen-hero1"
 import VisaOptions from "../components/visa-options"
 import VisaDetails from "../components/visa-details"
 import Faq from "../components/visa-faq"
 import SearchSection from "../components/visa-search-section"
+import { Newsletter } from "../components/newsletter"
 
 export default function TravelPage() {
   return (

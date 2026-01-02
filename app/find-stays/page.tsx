@@ -6,7 +6,7 @@ import PopularDestinations from "@/app/components/popular-destinations"
 import Statistics from "@/app/components/statistics"
 import FlightsHotels from "@/app/components/flights-hotels"
 import DestinationGrid from "@/app/components/destination-grid"
-import Newsletter from "../components/newsletter"
+
 import { Footer } from "../components/footer"
 import StaysHeader from "../components/stays-header"
 import StaysHeroSection from "../components/stays-hero-section"
@@ -16,6 +16,7 @@ import DealsAndDiscounts from "../components/deals-discounts"
 import GreeceBanner from "../components/greece-banner"
 import DubaiHotels from "../components/dubai-hotels"
 import TravelBlog from "../components/travel-blog"
+import { Newsletter } from "../components/newsletter"
 
 
 export default function FindStays() {

@@ -3,7 +3,8 @@
 import BlogsSection from "../components/blogs-section"
 import { Footer } from "../components/footer"
 import Header from "@/app/components/header"
-import Newsletter from "../components/newsletter"
+import { Newsletter } from "../components/newsletter"
+
 
 
 

@@ -1,126 +1,117 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
-import { Plane } from "lucide-react"
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  Plane,
+} from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
-
   const instagramImages = [
-  "/instagram-image1.jpg",
-  "/instagram-image2.jpg",
-  "/instagran-image3.jpg",
-  "/instagram-image4.jpg",
-  "/instagram-image5.jpg",
-  "/instagram-image6.jpg",
-]
+    "/instagram-image1.jpg",
+    "/instagram-image2.jpg",
+    "/instagran-image3.jpg",
+    "/instagram-image4.jpg",
+    "/instagram-image5.jpg",
+    "/instagram-image6.jpg",
+  ]
+
   return (
-    <footer className="bg-secondary/30 pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-secondary/30 pt-16">
+      <div className="max-w-[1200px] mx-auto px-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 items-start">
+
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Plane className="w-6 h-6 text-primary" />
               <span className="text-xl font-bold">TRAVEL</span>
             </div>
+
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
             </p>
+
             <div className="flex gap-3">
-              <button className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <Facebook className="w-4 h-4" />
-              </button>
-              <button className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <Twitter className="w-4 h-4" />
-              </button>
-              <button className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <Instagram className="w-4 h-4" />
-              </button>
-              <button className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </button>
+              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+                <button
+                  key={i}
+                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
+                >
+                  <Icon className="w-4 h-4" />
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Tours
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Destination
-                </Link>
-              </li>
-             <li>
-                <Link href="/blogs" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                   Contact us
-                </Link>
-              </li>
+            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2.5 text-sm text-muted-foreground">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/visascreen">Host A Venue</Link></li>
+              <li><Link href="/blogs">Blog</Link></li>
+              <li><Link href="/searchresults">Hotel</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Get In Touch */}
           <div>
-            <h3 className="font-bold mb-4">Get In Touch</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+1 (234) 5678</span>
+            <h3 className="font-semibold mb-4">Get In Touch</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-primary mt-0.5" />
+                +1 12345 67890
               </li>
-              <li className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">info@travel.com</span>
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-primary mt-0.5" />
+                example@gmail.com
               </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">456 Main St, Miami, FL 33131</span>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary mt-0.5" />
+                1014 N Main St, Miami, Oklahoma, 74354, United States
               </li>
             </ul>
           </div>
 
-          {/* Follow Us On Instagram */}
-        <div className="grid grid-cols-3 gap-2">
-  {instagramImages.map((src, index) => (
-    <div
-      key={index}
-      className="relative aspect-square overflow-hidden rounded"
-    >
-      <Image
-        src={src}
-        alt={`Instagram ${index + 1}`}
-        fill
-        className="object-cover transition-transform duration-300 hover:scale-110"
-      />
-    </div>
-  ))}
-</div>
-        </div>
+          {/* Instagram */}
+          <div>
+            <h3 className="font-semibold mb-4">
+              Follow Us On @instagram
+            </h3>
 
-        <div className="border-t border-border pt-8">
-          <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Travel. All rights reserved.
-          </p>
+            <div className="grid grid-cols-3 gap-2">
+              {instagramImages.map((src, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square rounded overflow-hidden"
+                >
+                  <Image
+                    src={src}
+                    alt={`Instagram ${index + 1}`}
+                    fill
+                    className="object-cover hover:scale-110 transition-transform"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-primary py-4">
+        <p className="text-center text-sm text-white">
+          © 2023 All rights reserved
+        </p>
       </div>
     </footer>
   )

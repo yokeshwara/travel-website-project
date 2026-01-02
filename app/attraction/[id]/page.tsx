@@ -4,9 +4,10 @@ import { useState } from "react"
 import Image from "next/image"
 import { Star, MapPin, Share2, ChevronDown, ChevronUp, Languages, Search, Info, Check } from "lucide-react"
 import NewHeader from "@/app/components/new-header"
-import Newsletter from "@/app/components/newsletter"
+
 import { Footer } from "@/app/components/footer"
 import { useRouter } from "next/navigation"
+import { Newsletter } from "@/app/components/newsletter"
 
 interface AttractionDetailProps {
   attractionId: string

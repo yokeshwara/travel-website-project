@@ -5,9 +5,10 @@ import PopularHotels from "@/app/components/popular-hotels"
 import PopularDestinations from "@/app/components/popular-destinations"
 import Statistics from "@/app/components/statistics"
 import FlightsHotels from "@/app/components/flights-hotels"
-import DestinationGrid from "@/app/components/destination-grid"
-import Newsletter from "./components/newsletter"
+
 import { Footer } from "./components/footer"
+import { Newsletter } from "./components/newsletter"
+import DestinationGrid from "./components/destination-grid"
 
 
 export default function Home() {

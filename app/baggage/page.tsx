@@ -3,10 +3,11 @@ import { Plane, Building, Car, Hotel, Facebook, Twitter, Youtube, Instagram, Pho
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import NewHeader from "../components/new-header"
-import Newsletter from "../components/newsletter"
+
 import { Footer } from "../components/footer"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { Newsletter } from "../components/newsletter"
 
 export default function TravelBookingPage() {
      const [isModalOpen, setIsModalOpen] = useState(false)

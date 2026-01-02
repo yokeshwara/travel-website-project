@@ -1,32 +1,28 @@
-"use client"
-
-import type React from "react"
-
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { Input } from "@/components/ui/input"
-
-export default function Newsletter() {
- 
-
-
+export function Newsletter() {
   return (
-     <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-12 md:py-16 lg:w-[1200px] lg:ml-50">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="text-white text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-2">Subscribe for</h3>
-                  <p className="text-xl md:text-2xl">Latest Newsletter</p>
-                </div>
-    
-                <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                  <Input type="email" placeholder="Your Email Address" className="bg-white w-full sm:w-80 px-6 py-6" />
-                  <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 whitespace-nowrap">
-                    Subscribe
-                  </Button>
-                </div>
-              </div>
-            </div>
+    <section className="max-w-[1200px] mx-auto px-4 mt-20 mb-16">
+      <div className="bg-primary rounded-2xl px-6 sm:px-10 py-10">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          
+          {/* Left Text */}
+          <h2 className="text-white text-2xl sm:text-3xl font-semibold leading-snug">
+            Subscribe for <br /> Latest Newsletter
+          </h2>
+
+          {/* Right Form */}
+          <div className="flex w-full lg:w-auto flex-col sm:flex-row items-center gap-4">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              className="w-full sm:w-[320px] h-12 rounded-full px-5 text-sm text-gray-800 outline-none"
+            />
+            <button className="w-full sm:w-auto h-12 px-6 rounded-full bg-white text-primary text-sm font-medium hover:bg-gray-100 transition">
+              Subscribe
+            </button>
           </div>
+
+        </div>
+      </div>
+    </section>
   )
 }
