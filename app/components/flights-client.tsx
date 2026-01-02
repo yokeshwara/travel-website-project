@@ -7,9 +7,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input"
 import { Slider } from "@/components/ui/slider"
 import { useSearchParams } from "next/navigation"
-import Newsletter from "../components/newsletter";
+
 import { Footer } from "../components/footer";
 import  HeroSection  from "../components/hero-section";
+import { Newsletter } from "./newsletter";
 
 export default function FlightClient() {
 
