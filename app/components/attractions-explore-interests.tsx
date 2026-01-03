@@ -20,10 +20,10 @@ export default function ExploreInterests() {
         
         {/* LEFT TEXT */}
         <div className="lg:col-span-1">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>
             Explore by interests
           </h2>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600 text-sm" style={{ fontFamily: "Urbanist" }}>
             Discover amazing things to do
           </p>
         </div>
@@ -35,17 +35,17 @@ export default function ExploreInterests() {
               key={idx}
               className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer group"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4" style={{ fontFamily: "Urbanist" }}>
                 <img
                   src={interest.icon}
                   alt={interest.title}
                   className="w-10 h-10 object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold text-gray-900" style={{ fontFamily: "Urbanist" }}>
                     {interest.title}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>
                     {interest.description}
                   </p>
                 </div>

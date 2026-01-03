@@ -1,4 +1,6 @@
+"use client"
 import { MapPin, User } from "lucide-react"
+import { useRouter } from "next/navigation";
 
 const hotels = [
   {
@@ -28,10 +30,11 @@ const hotels = [
 ]
 
 export default function DubaiHotels() {
+   const router = useRouter();
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-16">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-16" style={{ fontFamily: "Urbanist" }}>
           Popular Hotels in Dubai
         </h2>
 
@@ -41,7 +44,7 @@ export default function DubaiHotels() {
               key={hotel.id}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden group"
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              <div className="relative h-48 sm:h-56 overflow-hidden cursor-pointer" onClick={()=>router.push(`${'/hotel/1'}`)}>
                 <img
                   src={hotel.image}
                   alt={hotel.name}
@@ -50,23 +53,23 @@ export default function DubaiHotels() {
               </div>
 
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>
                   {hotel.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-500 mb-4">
+                <p className="text-sm text-gray-500 mb-4" style={{ fontFamily: "Urbanist" }}>
                   Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum
                   enim metus amet turpis lectus.
                 </p>
 
                 {/* Location & Capacity */}
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1" style={{ fontFamily: "Urbanist" }}>
                     <MapPin className="h-4 w-4 text-blue-600" />
                     <span>Museums</span>
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1" style={{ fontFamily: "Urbanist" }}>
                      <User className="h-4 w-4 text-blue-600" />
                     <span>24 Person Capacity</span>
                   </div>
@@ -74,9 +77,9 @@ export default function DubaiHotels() {
 
                 {/* Price */}
                 <div className="flex items-center justify-between">
-                  <div className="text-lg font-bold text-gray-900">
+                  <div className="text-lg font-bold text-gray-900" style={{ fontFamily: "Urbanist" }}>
                     {hotel.price}
-                    <span className="text-sm font-normal text-gray-500">
+                    <span className="text-sm font-normal text-gray-500" style={{ fontFamily: "Urbanist" }}>
                       / Per Night
                     </span>
                   </div>

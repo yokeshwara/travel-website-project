@@ -1,3 +1,5 @@
+
+
 import { Suspense } from "react";
 import FlightsClient from "../components/flights-client";
 

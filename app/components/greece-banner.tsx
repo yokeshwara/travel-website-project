@@ -14,13 +14,13 @@ export default function GreeceBanner() {
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-4 sm:mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance mb-4 sm:mb-6" style={{ fontFamily: "Urbanist" }}>
           Discover Greece for Less
         </h2>
-        <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-100 max-w-md">
+        <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-100 max-w-md" style={{ fontFamily: "Urbanist" }}>
           Explore ancient ruins, beautiful beaches, and rich culture at unbeatable prices
         </p>
-        <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+        <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium" style={{ fontFamily: "Urbanist" }}>
           Discover More
         </button>
       </div>

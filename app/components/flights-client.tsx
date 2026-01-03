@@ -47,17 +47,17 @@ export default function FlightClient() {
                 </svg>
                 <span>{to}</span>
               </div>
-              <div className="text-sm opacity-90">1 adult | economy</div>
+              <div className="text-sm opacity-90" style={{ fontFamily: "Urbanist" }}>1 adult | economy</div>
             </div>
           </div>
           <div className="flex items-center gap-2 md:gap-4 text-sm">
-            <button className="flex items-center gap-1 hover:opacity-80">
+            <button className="flex items-center gap-1 hover:opacity-80" style={{ fontFamily: "Urbanist" }}>
               <ChevronLeft className="h-4 w-4" />
               <span>Thu, 30 May</span>
             </button>
             
             <ChevronRight className="h-4 w-4" />
-            <button className="flex items-center gap-1 hover:opacity-80 ml-2 md:ml-4">
+            <button className="flex items-center gap-1 hover:opacity-80 ml-2 md:ml-4" style={{ fontFamily: "Urbanist" }}>
               <ChevronLeft className="h-4 w-4" />
               <span>Sat, 15 Jun</span>
             </button>
@@ -71,11 +71,11 @@ export default function FlightClient() {
         {/* Get Price Alerts & Results Count */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
           <div className="flex items-center justify-between w-full sm:w-auto gap-4">
-            <button className="text-sm hover:underline">Get Price Alerts</button>
-            <span className="text-sm font-medium">236 Results</span>
+            <button className="text-sm hover:underline" style={{ fontFamily: "Urbanist" }}>Get Price Alerts</button>
+            <span className="text-sm font-medium" style={{ fontFamily: "Urbanist" }}>236 Results</span>
           </div>
           <div className="flex items-center gap-2 w-full sm:w-auto">
-            <span className="text-sm">Sort by</span>
+            <span className="text-sm" style={{ fontFamily: "Urbanist" }}>Sort by</span>
             <Select defaultValue="best">
               <SelectTrigger className="w-[140px] bg-white">
                 <SelectValue placeholder="Best" />
@@ -98,7 +98,7 @@ export default function FlightClient() {
               <FilterSection title="Departure times" />
               <FilterSection title="Journey duration" />
               <div className="pt-2">
-                <div className="text-sm font-medium mb-3">2.5 hours - 30.5 hours</div>
+                <div className="text-sm font-medium mb-3" style={{ fontFamily: "Urbanist" }}>2.5 hours - 30.5 hours</div>
                 <Slider defaultValue={[25, 75]} max={100} step={1} className="mb-2" />
               </div>
               <FilterSection title="Airlines" />
@@ -122,41 +122,41 @@ export default function FlightClient() {
 
                     {/* Flight Details */}
                     <div className="flex-1 space-y-4 w-full">
-                      <div className="text-sm font-medium">{flight.route}</div>
+                      <div className="text-sm font-medium" style={{ fontFamily: "Urbanist" }}>{flight.route}</div>
 
                       {/* First Segment */}
                       <div className="flex items-center gap-2 md:gap-4">
                         <div className="text-left min-w-[60px]">
-                          <div className="text-xl font-bold">{flight.segments[0].departure}</div>
-                          <div className="text-xs text-gray-500">{flight.segments[0].location1}</div>
+                          <div className="text-xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.segments[0].departure}</div>
+                          <div className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>{flight.segments[0].location1}</div>
                         </div>
                         <div className="flex-1 flex flex-col items-center min-w-0">
-                          <div className="text-xs text-gray-500 mb-1">{flight.segments[0].duration}</div>
+                          <div className="text-xs text-gray-500 mb-1" style={{ fontFamily: "Urbanist" }}>{flight.segments[0].duration}</div>
                           <div className="w-full h-px bg-gray-300 relative">
                             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-gray-400"></div>
                           </div>
                         </div>
                         <div className="text-right min-w-[60px]">
-                          <div className="text-xl font-bold">{flight.segments[0].arrival}</div>
-                          <div className="text-xs text-gray-500">{flight.segments[0].location2}</div>
+                          <div className="text-xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.segments[0].arrival}</div>
+                          <div className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>{flight.segments[0].location2}</div>
                         </div>
                       </div>
 
                       {/* Second Segment */}
                       <div className="flex items-center gap-2 md:gap-4">
                         <div className="text-left min-w-[60px]">
-                          <div className="text-xl font-bold">{flight.segments[1].departure}</div>
+                          <div className="text-xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.segments[1].departure}</div>
                           <div className="text-xs text-gray-500">{flight.segments[1].location1}</div>
                         </div>
                         <div className="flex-1 flex flex-col items-center min-w-0">
-                          <div className="text-xs text-gray-500 mb-1">{flight.segments[1].duration}</div>
+                          <div className="text-xs text-gray-500 mb-1" style={{ fontFamily: "Urbanist" }}>{flight.segments[1].duration}</div>
                           <div className="w-full h-px bg-gray-300 relative">
                             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-gray-400"></div>
                           </div>
                         </div>
                         <div className="text-right min-w-[60px]">
-                          <div className="text-xl font-bold">{flight.segments[1].arrival}</div>
-                          <div className="text-xs text-gray-500">{flight.segments[1].location2}</div>
+                          <div className="text-xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.segments[1].arrival}</div>
+                          <div className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>{flight.segments[1].location2}</div>
                         </div>
                       </div>
                     </div>
@@ -164,8 +164,8 @@ export default function FlightClient() {
 
                   {/* Price & Book Button */}
                   <div className="flex md:flex-col items-center md:items-end justify-between md:justify-start gap-3 w-full md:w-auto md:min-w-[120px]">
-                    <div className="text-2xl font-bold">{flight.price}</div>
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6">Book Now</Button>
+                    <div className="text-2xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.price}</div>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6" style={{ fontFamily: "Urbanist" }}>Book Now</Button>
                   </div>
                 </div>
               </Card>

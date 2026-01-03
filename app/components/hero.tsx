@@ -11,8 +11,8 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 text-center text-white">
-        <p className="text-sm md:text-base uppercase tracking-wider mb-2 font-light">why us</p>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">ABOUT US</h1>
+        <p className="text-sm md:text-base uppercase tracking-wider mb-2 font-light" style={{ fontFamily: "Urbanist" }}>why us</p>
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight" style={{ fontFamily: "Urbanist" }}>ABOUT US</h1>
       </div>
     </section>
   )

@@ -23,8 +23,8 @@ export default function TravelPage() {
             <Faq />
             <SearchSection />
             <div className="flex flex-col items-center justify-center py-12 gap-4">
-              <p className="text-xl font-medium">Want to suggest something?</p>
-              <button className="px-8 py-2 border-2 border-blue-500 text-blue-500 rounded-md font-medium hover:bg-blue-50 transition-colors">
+              <p className="text-xl font-medium"  style={{ fontFamily: "Urbanist" }}>Want to suggest something?</p>
+              <button className="px-8 py-2 border-2 border-blue-500 text-blue-500 rounded-md font-medium hover:bg-blue-50 transition-colors"  style={{ fontFamily: "Urbanist" }}>
                 Leave feedback
               </button>
             </div>

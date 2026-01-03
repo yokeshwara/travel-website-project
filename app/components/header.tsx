@@ -18,18 +18,18 @@ export default function Header() {
         <div className="w-full mx-auto  py-5 px-2">
           <div className="flex items-center justify-between">
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex gap-8 text-white text-sm ">
+            <nav className="hidden lg:flex gap-8 text-white text-sm" style={{ fontFamily: "Urbanist" }}>
               
-              <Link href="/" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="/" className="flex items-center gap-2 hover:text-orange-400" style={{ fontFamily: "Urbanist" }}>
                 <Plane size={16} /> Find Flight
               </Link>
-              <Link href="/attractions" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="/attractions" className="flex items-center gap-2 hover:text-orange-400" style={{ fontFamily: "Urbanist" }}>
                 <Plane size={16} /> Attractions
               </Link>
-              <Link href="/find-stays" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="/find-stays" className="flex items-center gap-2 hover:text-orange-400" style={{ fontFamily: "Urbanist" }}>
                 <Hotel size={16} /> Find Stays
               </Link>
-              <Link href="#" className="flex items-center gap-2 hover:text-orange-400">
+              <Link href="#" className="flex items-center gap-2 hover:text-orange-400" style={{ fontFamily: "Urbanist" }}>
                 <Car size={16} /> Airport Taxi
               </Link>
             </nav>
@@ -51,7 +51,8 @@ export default function Header() {
             <div className="flex gap-4 items-center">
               <button
                 onClick={() => setShowLogin(true)}
-                className="hidden md:block text-white hover:text-orange-400 "
+                className="hidden md:block text-white hover:text-orange-400"
+                style={{ fontFamily: "Urbanist" }}
               >
                 Login
               </button>
@@ -59,6 +60,7 @@ export default function Header() {
               <button
                 onClick={() => setShowSignup(true)}
                 className="hidden md:block bg-white text-black rounded-full px-6 py-2"
+                style={{ fontFamily: "Urbanist" }}
               >
                 Sign up
               </button>
@@ -74,21 +76,23 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <nav className="lg:hidden mt-4 bg-black/40 backdrop-blur-md rounded-xl p-5 text-white flex flex-col gap-4">
-              <Link href="/" className="flex gap-2"><Plane size={16} /> Find Flight</Link>
-              <Link href="/find-stays" className="flex gap-2"><Hotel size={16} /> Find Stays</Link>
-              <Link href="/airport-taxi" className="flex gap-2"><Car size={16} /> Airport Taxi</Link>
+            <nav className="lg:hidden mt-4 bg-black/40 backdrop-blur-md rounded-xl p-5 text-white flex flex-col gap-4" style={{ fontFamily: "Urbanist" }}>
+              <Link href="/" className="flex gap-2" style={{ fontFamily: "Urbanist" }}><Plane size={16} /> Find Flight</Link>
+              <Link href="/find-stays" className="flex gap-2" style={{ fontFamily: "Urbanist" }}><Hotel size={16} /> Find Stays</Link>
+              <Link href="/airport-taxi" className="flex gap-2" style={{ fontFamily: "Urbanist" }}><Car size={16} /> Airport Taxi</Link>
 
               <div className="pt-3 border-t border-white/20 flex flex-col gap-2">
                 <button
                   onClick={() => setShowLogin(true)}
                   className="border border-white rounded-md py-2"
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Login
                 </button>
                 <button
                   onClick={() => setShowSignup(true)}
                   className="bg-white text-black rounded-md py-2"
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Sign up
                 </button>
@@ -169,8 +173,8 @@ function Modal({ title, children, onClose }: any) {
         <button onClick={onClose} className="absolute right-4 top-4 text-gray-500">
           <X size={22} />
         </button>
-        <h2 className="text-2xl font-semibold text-center mb-6">{title}</h2>
-        <div className="space-y-4">{children}</div>
+        <h2 className="text-2xl font-semibold text-center mb-6" style={{ fontFamily: "Urbanist" }}>{title}</h2>
+        <div className="space-y-4" style={{ fontFamily: "Urbanist" }}>{children}</div>
       </div>
     </div>
   )
@@ -179,7 +183,7 @@ function Modal({ title, children, onClose }: any) {
 function Input({ label, placeholder }: any) {
   return (
     <div>
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="text-sm font-medium text-gray-700" style={{ fontFamily: "Urbanist" }}>{label}</label>
       <input
         placeholder={placeholder}
         className="w-full mt-1 border rounded-md px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"
@@ -191,7 +195,7 @@ function Input({ label, placeholder }: any) {
 function PasswordInput({ label, show, toggle }: any) {
   return (
     <div className="relative">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="text-sm font-medium text-gray-700" style={{ fontFamily: "Urbanist" }}>{label}</label>
       <input
         type={show ? "text" : "password"}
         placeholder="Password"
@@ -210,7 +214,7 @@ function PasswordInput({ label, show, toggle }: any) {
 
 function Checkbox() {
   return (
-    <div className="flex items-center gap-2 text-sm text-gray-600">
+    <div className="flex items-center gap-2 text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>
       <input type="checkbox" />
       <span>
         I agree with <a className="text-blue-600">Terms</a> and{" "}
@@ -222,19 +226,19 @@ function Checkbox() {
 
 function PrimaryButton({ text }: any) {
   return (
-    <button className="w-full bg-blue-600 text-white py-2.5 rounded-md hover:bg-blue-700">
+    <button className="w-full bg-blue-600 text-white py-2.5 rounded-md hover:bg-blue-700" style={{ fontFamily: "Urbanist" }}>
       {text}
     </button>
   )
 }
 
 function Divider() {
-  return <div className="text-center text-gray-400 text-sm">or</div>
+  return <div className="text-center text-gray-400 text-sm" style={{ fontFamily: "Urbanist" }}>or</div>
 }
 
 function GoogleButton({ text }: any) {
   return (
-    <button className="w-full border rounded-md py-2.5 flex justify-center items-center gap-3">
+    <button className="w-full border rounded-md py-2.5 flex justify-center items-center gap-3" style={{ fontFamily: "Urbanist" }}>
       <Image src="/grommet-icons_google.png" alt="Google" width={20} height={20} />
       {text}
     </button>
@@ -245,7 +249,7 @@ function FooterText({ text, linkText, onClick }: any) {
   return (
     <p className="text-center text-sm text-gray-600 mt-4">
       {text}{" "}
-      <button onClick={onClick} className="text-blue-600 font-medium">
+      <button onClick={onClick} className="text-blue-600 font-medium" style={{ fontFamily: "Urbanist" }}>
         {linkText}
       </button>
     </p>

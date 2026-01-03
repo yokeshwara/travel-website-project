@@ -65,8 +65,8 @@ function FeaturedDestinations() {
 
               {/* Text Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-lg font-semibold">{dest.country}</h3>
-                <p className="text-sm text-white/90">{dest.city}</p>
+                <h3 className="text-lg font-semibold" style={{ fontFamily: "Urbanist" }}>{dest.country}</h3>
+                <p className="text-sm text-white/90" style={{ fontFamily: "Urbanist" }}>{dest.city}</p>
               </div>
             </div>
           ))}

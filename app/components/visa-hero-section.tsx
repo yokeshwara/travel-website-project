@@ -10,7 +10,7 @@ export default function VisaHeroSection() {
   const passengerRef = useRef<HTMLDivElement>(null)
 
   const handleSearch = () => {
-    router.push("/searchresults")
+    router.push("#")
   }
 
   return (

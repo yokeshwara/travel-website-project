@@ -102,10 +102,10 @@ export default function AttractionsSection() {
         
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>
             Dubai attractions
           </h2>
-          <p className="text-gray-600">123 results</p>
+          <p className="text-gray-600" style={{ fontFamily: "Urbanist" }}>123 results</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -113,7 +113,7 @@ export default function AttractionsSection() {
           {/* Sidebar Filters */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg p-6 sticky top-20">
-              <h3 className="font-bold text-lg mb-6 text-gray-900">Filter by</h3>
+              <h3 className="font-bold text-lg mb-6 text-gray-900" style={{ fontFamily: "Urbanist" }}>Filter by</h3>
 
               <div className="space-y-4">
               {filterCategories.map((category, index) => (
@@ -129,7 +129,7 @@ export default function AttractionsSection() {
       }
       className="flex items-center justify-between w-full py-2"
     >
-      <span className="font-semibold text-gray-900">
+      <span className="font-semibold text-gray-900" style={{ fontFamily: "Urbanist" }}>
         {category.title}
       </span>
       <ChevronDown
@@ -172,13 +172,13 @@ export default function AttractionsSection() {
                   {/* SIGN IN BANNER AFTER 2nd CARD */}
                   {index === 1 && (
                     <div className="mt-6 bg-white border border-gray-200 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1" style={{ fontFamily: "Urbanist" }}>
                         Sign in to save time
                       </h3>
-                      <p className="text-gray-600 text-sm mb-2">
+                      <p className="text-gray-600 text-sm mb-2" style={{ fontFamily: "Urbanist" }}>
                         Your Travel Mania account lets you book using your saved details
                       </p>
-                      <button className="text-blue-600 font-medium hover:underline text-sm">
+                      <button className="text-blue-600 font-medium hover:underline text-sm" style={{ fontFamily: "Urbanist" }}>
                         Sign in
                       </button>
                     </div>

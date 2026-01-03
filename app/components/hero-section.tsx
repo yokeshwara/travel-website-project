@@ -67,7 +67,7 @@ export default function HeroSection() {
     <div className="relative z-10 flex justify-center"> 
     <div className="relative mt-[420px] w-[95%] max-w-6xl bg-white rounded-2xl shadow-xl p-6 lg:absolute lg:mt-0 lg:top-[580px]">
           {/* Tabs */}
-          <div className="flex gap-8 border-b mb-6">
+          <div className="flex gap-8 border-b mb-6" style={{ fontFamily: "Urbanist" }}>
             <Link href="/" className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
               <Plane size={18} /> Flights
             </Link>
@@ -84,7 +84,7 @@ export default function HeroSection() {
 
             {/* From - To */}
             <div className="relative border rounded-lg px-4 pt-4 pb-3">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
                 From - To
               </span>
               <div className="flex items-center gap-2">
@@ -106,15 +106,15 @@ export default function HeroSection() {
 
             {/* Trip */}
             <div className="relative border rounded-lg px-4 pt-4 pb-3">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
                 Trip
               </span>
-              <p className="font-medium">Return</p>
+              <p className="font-medium" style={{ fontFamily: "Urbanist" }}>Return</p>
             </div>
 
             {/* Date */}
             <div className="relative border rounded-lg px-4 pt-4 pb-3 cursor-pointer">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
                 Depart - Return
               </span>
               <p onClick={() => setOpenDate(!openDate)}>{dateValue}</p>
@@ -137,12 +137,12 @@ export default function HeroSection() {
               className="relative border rounded-lg px-4 pt-4 pb-3 cursor-pointer"
               onClick={() => setOpenPassenger(!openPassenger)}
             >
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
                 Passenger - Class
               </span>
 
               <div className="flex justify-between items-center">
-                <p className="font-medium">
+                <p className="font-medium" style={{ fontFamily: "Urbanist" }}>
                   {adults + children} Passenger, {travelClass}
                 </p>
                 <ChevronDown size={18} />
@@ -161,8 +161,8 @@ export default function HeroSection() {
                   {/* Adults */}
                   <div className="flex justify-between items-center mb-4">
                     <div>
-                      <p className="font-semibold">Adults</p>
-                      <p className="text-xs text-gray-500">Aged 16+</p>
+                      <p className="font-semibold" style={{ fontFamily: "Urbanist" }}>Adults</p>
+                      <p className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>Aged 16+</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <button
@@ -190,8 +190,8 @@ export default function HeroSection() {
                   {/* Children */}
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <p className="font-semibold">Children</p>
-                      <p className="text-xs text-gray-500">Aged 0–15</p>
+                      <p className="font-semibold" style={{ fontFamily: "Urbanist" }}>Children</p>
+                      <p className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>Aged 0–15</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <button
@@ -217,12 +217,12 @@ export default function HeroSection() {
                   </div>
 
                   {/* Info */}
-                  <p className="text-sm leading-relaxed text-gray-600 mb-4">
+                  <p className="text-sm leading-relaxed text-gray-600 mb-4" style={{ fontFamily: "Urbanist" }}>
                    Your age at time of travel must be valid for the age category booked.
                    Airlines have restrictions on under 18s travelling alone.
                   </p>
 
-                   <p className="text-sm leading-relaxed text-gray-600 mb-6">
+                   <p className="text-sm leading-relaxed text-gray-600 mb-6"style={{ fontFamily: "Urbanist" }}>
                     Age limits and policies for travelling with children may vary so please
                     check with the airline before booking.
                    </p>
@@ -236,6 +236,7 @@ export default function HeroSection() {
     router.push("/PassengerDetails");
   }}
   className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold"
+  style={{ fontFamily: "Urbanist" }}
 >
   Apply
 </button>
@@ -247,13 +248,14 @@ export default function HeroSection() {
 
           {/* Actions */}
           <div className="flex justify-between items-center mt-6 lg:ml-190">
-            <button className="flex items-center gap-2 text-sm text-gray-600">
+            <button className="flex items-center gap-2 text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>
               <Plus size={16} /> Add Promo Code
             </button>
 
             <button
               onClick={handleSearch}
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg"
+              style={{ fontFamily: "Urbanist" }}
             >
               <Send size={16} /> Show Flights
             </button>

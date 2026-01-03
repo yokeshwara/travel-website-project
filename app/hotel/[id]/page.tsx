@@ -486,7 +486,7 @@ const reviews = [
 
       {/* Rooms Section - Completely redesigned to match booking layout from image */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Rooms</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Urbanist" }}>Available Rooms</h2>
         <div className="space-y-8">
           {rooms.map((room) => (
             <div key={room.id} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -497,7 +497,7 @@ const reviews = [
                   alt={room.name}
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-lg font-bold text-blue-600 mb-4">{room.name}</h3>
+                <h3 className="text-lg font-bold text-blue-600 mb-4" style={{ fontFamily: "Urbanist" }}>{room.name}</h3>
 
                 <div className="space-y-2 text-sm text-gray-700">
                   <div className="flex items-center gap-2">
@@ -510,7 +510,7 @@ const reviews = [
                   </div>
                 </div>
 
-                <button className="mt-auto pt-6 text-blue-600 font-semibold hover:underline text-sm">
+                <button className="mt-auto pt-6 text-blue-600 font-semibold hover:underline text-sm" style={{ fontFamily: "Urbanist" }}>
                   See room details →
                 </button>
               </div>
@@ -527,12 +527,12 @@ const reviews = [
                         ) : (
                           <span className="text-lg">🏨</span>
                         )}
-                        <span className="font-semibold text-gray-900">{option.type}</span>
+                        <span className="font-semibold text-gray-900" style={{ fontFamily: "Urbanist" }}>{option.type}</span>
                         {option.type === "Breakfast included" && (
                           <span className="text-xs text-gray-500">(info icon)</span>
                         )}
                       </div>
-                      <div className="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">
+                      <div className="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded" style={{ fontFamily: "Urbanist" }}>
                         -{option.discount}% TODAY
                       </div>
                     </div>
@@ -546,7 +546,7 @@ const reviews = [
                         </div>
                       ))}
                       {option.refund && (
-                        <div className="flex items-center gap-2 text-sm text-gray-600 ml-6">
+                        <div className="flex items-center gap-2 text-sm text-gray-600 ml-6" style={{ fontFamily: "Urbanist" }}>
                           <Heart size={16} className="flex-shrink-0" />
                           <span>Protect my booking with Refund Protect {option.refund}</span>
                         </div>
@@ -560,13 +560,13 @@ const reviews = [
                         <span className="text-gray-500 line-through text-lg">${option.originalPrice}</span>
                       </div>
                       <div className="text-sm text-gray-600 mb-4">
-                        <span className="font-semibold">$30</span> per night (12 nights)
+                        <span className="font-semibold" style={{ fontFamily: "Urbanist" }}>$30</span> per night (12 nights)
                         <br />
-                        <span className="text-xs">VAT included</span>
+                        <span className="text-xs" style={{ fontFamily: "Urbanist" }}>VAT included</span>
                       </div>
 
                       {/* Book Button */}
-                      <button onClick={bookNow} className="lg:w-23  lg:ml-115 bg-blue-600 text-white font-bold py-0 hover:bg-blue-700 transition-colors">
+                      <button onClick={bookNow} className="lg:w-23  lg:ml-115 bg-blue-600 text-white font-bold py-0 hover:bg-blue-700 transition-colors" style={{ fontFamily: "Urbanist" }}>
                         Book
                       </button>
                     </div>
@@ -580,7 +580,7 @@ const reviews = [
 
       {/* Facilities Section */}
      <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
-      <h2 className="text-xl font-bold text-gray-900 mb-8">
+      <h2 className="text-xl font-bold text-gray-900 mb-8" style={{ fontFamily: "Urbanist" }}>
         Facilities
       </h2>
 
@@ -621,7 +621,7 @@ const reviews = [
       {/* Location Section */}
   \<div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       {/* Title */}
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">
+      <h2 className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Urbanist" }}>
         Location
       </h2>
 
@@ -633,12 +633,12 @@ const reviews = [
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-green-600" />
-              <span className="text-sm font-semibold text-green-600">
+              <span className="text-sm font-semibold text-green-600"  style={{ fontFamily: "Urbanist" }}>
                 Nearby Top Locations
               </span>
             </div>
 
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-500"  style={{ fontFamily: "Urbanist" }}>
               Walk / Distance
             </span>
           </div>
@@ -655,7 +655,7 @@ const reviews = [
                   <span>{item.name}</span>
                 </div>
 
-                <span className="text-gray-600">
+                <span className="text-gray-600"  style={{ fontFamily: "Urbanist" }}>
                   {item.distance}
                 </span>
               </li>
@@ -678,13 +678,13 @@ const reviews = [
 
       {/* Description Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Description of the Accommodation</h2>
-        <p className="text-gray-700 leading-relaxed">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4"  style={{ fontFamily: "Urbanist" }}>Description of the Accommodation</h2>
+        <p className="text-gray-700 leading-relaxed"  style={{ fontFamily: "Urbanist" }}>
            This hotel is located on Casablanca Road in the Al Garhoud district, just 5 minutes from Dubai International Airport. The hotel is only a few minutes away from Dubai Creek Golf and Yacht Club, Dubai. The hotel's restaurants provide a wide selection of cuisine created by their award-winning master chefs, from Thai and Italian to Lebanese. The luxury hotel offers a nightclub, a café and a bar. In addition guests canfind the very best conference facilities and services available. Alternatively guests can simply relax with a host of recreational activities. Car park is available for those arriving by car.The rooms and suites are spacious and very comfortable. Each room comes with an en suite bathroom. All of them are well-equipped as standard.There is a swimming pool and paddling pool in the grounds. Guests can relax in the  hot tub, work out in the gym, or play tennis golf and squash.
         </p>
        <br></br>
-          <h2 className="text-1xl font-bold text-gray-900 mb-4">Amenities</h2>
-     <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-1xl font-bold text-gray-900 mb-4"  style={{ fontFamily: "Urbanist" }}>Amenities</h2>
+     <p className="text-gray-700 leading-relaxed"  style={{ fontFamily: "Urbanist" }}>
           Pamper yourself with a visit to the spa, which offers massages. You can take advantage of recreational amenities such as a health club, an outdoor pool, and a sauna. Additional amenities at this hotel include complimentary wireless Internet access, concierge services, and gift shops/newsstands.
         </p>
       
@@ -694,7 +694,7 @@ const reviews = [
       {/* Check-in and Important Information */}
     <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       {/* Title */}
-      <h2 className="text-xl font-bold text-gray-900 mb-6">
+      <h2 className="text-xl font-bold text-gray-900 mb-6"  style={{ fontFamily: "Urbanist" }}>
         Checkin and important information
       </h2>
 
@@ -702,7 +702,7 @@ const reviews = [
       <div className="space-y-6 text-sm text-gray-600">
         {/* Check-in */}
         <div>
-          <p className="font-semibold text-gray-900 mb-1">
+          <p className="font-semibold text-gray-900 mb-1"  style={{ fontFamily: "Urbanist" }}>
             Check-In
           </p>
           <p>Checkin time 2:00 PM – 12:00 PM</p>
@@ -711,7 +711,7 @@ const reviews = [
 
         {/* Check-out */}
         <div>
-          <p className="font-semibold text-gray-900 mb-1">
+          <p className="font-semibold text-gray-900 mb-1"  style={{ fontFamily: "Urbanist" }}>
             Check-Out
           </p>
           <p>Checkout time 12:00 PM</p>
@@ -721,7 +721,7 @@ const reviews = [
 
      <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       {/* Title */}
-      <h2 className="text-xl font-bold text-gray-900 mb-6">
+      <h2 className="text-xl font-bold text-gray-900 mb-6"  style={{ fontFamily: "Urbanist" }} >
         Instructions
       </h2>
 
@@ -760,23 +760,24 @@ const reviews = [
       {/* Reviews Section - Completely redesigned with score-based layout */}
     <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       {/* Header */}
-      <h2 className="text-xl font-bold text-gray-900 mb-4">
+      <h2 className="text-xl font-bold text-gray-900 mb-4"  style={{ fontFamily: "Urbanist" }}>
         User ratings
       </h2>
 
       {/* Overall rating */}
       <div className="flex items-center gap-3 mb-6">
         <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-        <span className="text-lg font-bold text-gray-900">8.4</span>
-        <span className="text-sm font-semibold text-gray-700">
+        <span className="text-lg font-bold text-gray-900"  style={{ fontFamily: "Urbanist" }}>8.4</span>
+        <span className="text-sm font-semibold text-gray-700"  style={{ fontFamily: "Urbanist" }}>
           Fabulous
         </span>
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-gray-500"  style={{ fontFamily: "Urbanist" }}>
           (1694 reviews)
         </span>
         <a
           href="#"
           className="ml-4 text-sm font-medium text-blue-600 hover:underline"
+          style={{ fontFamily: "Urbanist" }}
         >
           See all reviews
         </a>
@@ -810,12 +811,13 @@ const reviews = [
     <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-gray-900">
+        <h2 className="text-xl font-bold text-gray-900"  style={{ fontFamily: "Urbanist" }}>
           What guests loved most
         </h2>
         <a
           href="#"
           className="text-sm font-medium text-blue-600 hover:underline"
+           style={{ fontFamily: "Urbanist" }}
         >
           See all reviews
         </a>
@@ -874,7 +876,7 @@ const reviews = [
     </div>
       {/* FAQ Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6"  style={{ fontFamily: "Urbanist" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-lg">
@@ -901,12 +903,12 @@ const reviews = [
       <div className="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
       <div className="w-full max-w-3xl text-left">
         {/* Heading */}
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900"  style={{ fontFamily: "Urbanist" }}> 
           Looking for specific information?
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-gray-500"  style={{ fontFamily: "Urbanist" }}>
           Search product info, FAQs, reviews
         </p>
 
@@ -926,8 +928,8 @@ const reviews = [
 
         {/* Feedback */}
         <div className="mt-6 flex items-center justify-center gap-2 text-sm">
-          <span className="text-gray-500">Want to suggest something?</span>
-          <button className="rounded-md border border-blue-500 px-3 py-1 text-blue-600 hover:bg-blue-50 transition">
+          <span className="text-gray-500"  style={{ fontFamily: "Urbanist" }}>Want to suggest something?</span>
+          <button className="rounded-md border border-blue-500 px-3 py-1 text-blue-600 hover:bg-blue-50 transition"  style={{ fontFamily: "Urbanist" }}>
             Leave feedback
           </button>
         </div>

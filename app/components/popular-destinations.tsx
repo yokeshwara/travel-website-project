@@ -1,3 +1,7 @@
+"use client"
+
+import { useRouter } from "next/navigation";
+
 const destinations = [
   {
     name: "Mongolia Hills National Park",
@@ -22,15 +26,19 @@ const destinations = [
 ]
 
 export default function PopularDestinations() {
+     const router = useRouter();
+         const morePlaces = () => {
+            router.push("/attractions-searchresults") // change route as needed
+          }
   return (
     <section className="py-12 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-end mb-8 lg:mr-35">
-          <div className="lg:ml-20">
+          <div className="lg:ml-20" style={{ fontFamily: "Urbanist" }}>
             <h2 className="text-2xl lg:text-4xl font-bold mb-2">Popular Destinations</h2>
             <p className="text-muted-foreground">Things to do and Places to see in National Park</p>
           </div>
-          <button className="hidden md:block text-primary hover:underline font-medium">See more places</button>
+          <button  onClick={morePlaces}  className="hidden md:block text-primary hover:underline font-medium">See more places</button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:ml-20 lg:w-320">
@@ -41,15 +49,16 @@ export default function PopularDestinations() {
                   src={destination.image || "/placeholder.svg"}
                   alt={destination.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  onClick={()=>router.push(`${'/hotel/1'}`)}
                 />
               </div>
-              <h3 className="font-semibold mb-1">{destination.name}</h3>
-              <p className="text-muted-foreground text-sm">From Rs. £{destination.price}</p>
+              <h3 className="font-semibold mb-1" style={{ fontFamily: "Urbanist" }}>{destination.name}</h3>
+              <p className="text-muted-foreground text-sm" style={{ fontFamily: "Urbanist" }}>From Rs. £{destination.price}</p>
             </div>
           ))}
         </div>
 
-        <button className="md:hidden text-primary hover:underline font-medium mt-6 mx-auto block">
+        <button  onClick={morePlaces} className="md:hidden text-primary hover:underline font-medium mt-6 mx-auto block" style={{ fontFamily: "Urbanist" }}>
           See more places
         </button>
       </div>

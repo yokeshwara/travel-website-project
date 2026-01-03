@@ -117,8 +117,8 @@ export default function BlogsSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-gray-900/20"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-white text-center">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-2 tracking-wide">Travel Mania</h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider text-balance">TRAVEL BLOG</h1>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-2 tracking-wide" style={{ fontFamily: "Urbanist" }}>Travel Mania</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider text-balance" style={{ fontFamily: "Urbanist" }}>TRAVEL BLOG</h1>
         </div>
       </section>
 
@@ -127,7 +127,7 @@ export default function BlogsSection() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between max-w-5xl mx-auto">
             <div className="w-full md:w-48">
-              <select className="w-full border border-gray-300 rounded-md px-4 py-2.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <select className="w-full border border-gray-300 rounded-md px-4 py-2.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" style={{ fontFamily: "Urbanist" }}>
                 <option>Latest Blog</option>
                 <option>Popular Blog</option>
                 <option>Trending Blog</option>
@@ -135,7 +135,7 @@ export default function BlogsSection() {
             </div>
             <div className="flex-1 w-full max-w-2xl flex gap-2">
               <Input type="text" placeholder="Search news..." className="flex-1 border-gray-300 focus:ring-blue-500" />
-              <Button className="bg-blue-600 hover:bg-blue-700 px-6">Search</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 px-6" style={{ fontFamily: "Urbanist" }}>Search</Button>
             </div>
           </div>
         </div>
@@ -156,9 +156,9 @@ export default function BlogsSection() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900 line-clamp-2">{post.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.description}</p>
-                  <p className="text-gray-500 text-sm font-medium">{post.date}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 line-clamp-2" style={{ fontFamily: "Urbanist" }}>{post.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2" style={{ fontFamily: "Urbanist" }}>{post.description}</p>
+                  <p className="text-gray-500 text-sm font-medium" style={{ fontFamily: "Urbanist" }}>{post.date}</p>
                 </CardContent>
               </Card>
               </Link>
@@ -167,7 +167,7 @@ export default function BlogsSection() {
 
           {/* Load More Button */}
           <div className="flex justify-center mt-12">
-            <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-6 text-base">Read More</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-6 text-base" style={{ fontFamily: "Urbanist" }}>Read More</Button>
           </div>
         </div>
       </section>

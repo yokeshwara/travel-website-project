@@ -1,4 +1,6 @@
+"use client"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation";
 
 const OPTIONS = [
   {
@@ -22,6 +24,10 @@ const OPTIONS = [
 ]
 
 export default function VisaOptions() {
+    const router = useRouter();
+           const viewDetails = () => {
+              router.push("/visascreen2") // change route as needed
+            }
   return (
     <section className="mb-16">
       <div className="text-center mb-10">
@@ -47,7 +53,7 @@ export default function VisaOptions() {
               <p className="text-slate-600">
                 Starts from <span className="text-blue-600 font-bold">AED {opt.price}</span> /person
               </p>
-              <Button className="bg-blue-600 hover:bg-blue-700 w-full md:w-auto px-8">VIEW DETAILS</Button>
+              <Button  onClick={viewDetails} className="bg-blue-600 hover:bg-blue-700 w-full md:w-auto px-8">VIEW DETAILS</Button>
             </div>
           </div>
         ))}

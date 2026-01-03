@@ -127,8 +127,7 @@ export default function HotelListings() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Hotels in Dubai</h2>
-          <p className="text-gray-600">540 properties found</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>Hotels in Dubai</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -147,6 +146,7 @@ export default function HotelListings() {
                       ? "bg-primary text-white"
                       : "bg-white text-gray-700 border border-gray-300 hover:border-primary"
                   }`}
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Our top picks
                 </button>
@@ -157,6 +157,7 @@ export default function HotelListings() {
                       ? "bg-primary text-white"
                       : "bg-white text-gray-700 border border-gray-300 hover:border-primary"
                   }`}
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Most popular
                 </button>
@@ -167,6 +168,7 @@ export default function HotelListings() {
                       ? "bg-primary text-white"
                       : "bg-white text-gray-700 border border-gray-300 hover:border-primary"
                   }`}
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Lowest price
                 </button>
@@ -177,6 +179,7 @@ export default function HotelListings() {
                       ? "bg-primary text-white"
                       : "bg-white text-gray-700 border border-gray-300 hover:border-primary"
                   }`}
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   Best reviewed
                 </button>

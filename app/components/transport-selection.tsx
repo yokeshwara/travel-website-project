@@ -93,7 +93,7 @@ export default function TransportSelection() {
     <section className="max-w-7xl mx-auto px-4 py-10 space-y-10 lg:mt-50">
 
         <div className="max-w-7xl mx-auto"> 
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2 text-balance"> Select the following transfer type to book </h2> 
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2 text-balance" style={{ fontFamily: "Urbanist" }}> Select the following transfer type to book </h2> 
         <p className="text-gray-600 mb-12"></p>
         </div>
       {transports.map((item) => (
@@ -114,7 +114,7 @@ export default function TransportSelection() {
             </div>
 
             {/* RIGHT TEXT */}
-            <div className="space-y-3">
+            <div className="space-y-3" style={{ fontFamily: "Urbanist" }}>
               <h2 className="text-2xl font-bold">{item.title}</h2>
 
               <p><strong>From:</strong> {item.from}</p>
@@ -132,7 +132,7 @@ export default function TransportSelection() {
 
               {/* Cancellation */}
               <div>
-                <h4 className="font-semibold mb-3">Cancellation Policy :</h4>
+                <h4 className="font-semibold mb-3" style={{ fontFamily: "Urbanist" }}>Cancellation Policy :</h4>
                 <ul className="space-y-2">
                   {item.cancellation.map((c, i) => (
                     <li key={i}>{c}</li>
@@ -142,7 +142,7 @@ export default function TransportSelection() {
 
               {/* Inclusions */}
               <div className="md:border-l md:pl-6">
-                <h4 className="font-semibold mb-3">Inclusions :</h4>
+                <h4 className="font-semibold mb-3" style={{ fontFamily: "Urbanist" }}>Inclusions :</h4>
                 <ul className="space-y-2">
                   {item.inclusions.map((c, i) => (
                     <li key={i}>{c}</li>
@@ -152,7 +152,7 @@ export default function TransportSelection() {
 
               {/* Exclusions */}
               <div className="md:border-l md:pl-6">
-                <h4 className="font-semibold mb-3">Exclusions :</h4>
+                <h4 className="font-semibold mb-3" style={{ fontFamily: "Urbanist" }}>Exclusions :</h4>
                 <ul className="space-y-2">
                   {item.exclusions.map((c, i) => (
                     <li key={i}>{c}</li>
@@ -162,7 +162,7 @@ export default function TransportSelection() {
 
               {/* Summary */}
               <div className="md:border-l md:pl-6">
-                <h4 className="font-semibold mb-3">Summary :</h4>
+                <h4 className="font-semibold mb-3" style={{ fontFamily: "Urbanist" }}>Summary :</h4>
                 <ul className="space-y-2">
                   {item.summary.map((c, i) => (
                     <li key={i}>{c}</li>
@@ -174,7 +174,7 @@ export default function TransportSelection() {
 
           {/* BOOK BUTTON */}
           <div className="flex justify-end mt-6">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-md font-semibold">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-md font-semibold" style={{ fontFamily: "Urbanist" }}>
               Book
             </button>
           </div>

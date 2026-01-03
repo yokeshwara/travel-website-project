@@ -5,7 +5,7 @@ export function Newsletter() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           
           {/* Left Text */}
-          <h2 className="text-white text-2xl sm:text-3xl font-semibold leading-snug">
+          <h2 className="text-white text-2xl sm:text-3xl font-semibold leading-snug" style={{ fontFamily: "Urbanist" }}>
             Subscribe for <br /> Latest Newsletter
           </h2>
 
@@ -14,9 +14,36 @@ export function Newsletter() {
             <input
               type="email"
               placeholder="Your Email Address"
-              className="w-full sm:w-[320px] h-12 rounded-full px-5 text-sm text-gray-800 outline-none"
+              className="
+                w-full sm:w-[340px]
+                h-12
+                rounded-full
+                px-6
+                text-sm
+                bg-white
+                text-blue-600
+                placeholder:text-blue-500
+                outline-none
+                focus:ring-2
+                focus:ring-white/60
+              "
             />
-            <button className="w-full sm:w-auto h-12 px-6 rounded-full bg-white text-primary text-sm font-medium hover:bg-gray-100 transition">
+
+            <button
+              className="
+                w-full sm:w-auto
+                h-12
+                px-7
+                rounded-full
+                bg-white
+                text-primary
+                text-sm
+                font-medium
+                hover:bg-gray-100
+                transition
+              "
+              style={{ fontFamily: "Urbanist" }}
+            >
               Subscribe
             </button>
           </div>

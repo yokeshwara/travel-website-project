@@ -31,15 +31,15 @@ export default function AttractionCard({ attraction }: AttractionCardProps) {
         {/* Content */}
         <div className="md:col-span-2 flex flex-col justify-between">
           <div>
-            <p className="text-sm text-blue-600 font-semibold mb-1">{attraction.location}</p>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">{attraction.title}</h3>
+            <p className="text-sm text-blue-600 font-semibold mb-1" style={{ fontFamily: "Urbanist" }}>{attraction.location}</p>
+            <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2" style={{ fontFamily: "Urbanist" }}>{attraction.title}</h3>
 
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-600 mb-4" style={{ fontFamily: "Urbanist" }}>
               With the tour you get the chance to discover Dubai's that Present and Future Experience offers
             </p>
 
             <div className="flex items-center gap-4 text-sm text-gray-600">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1" style={{ fontFamily: "Urbanist" }}>
                 <Eye size={16} />
                 <span>Free cancellation available</span>
               </div>
@@ -55,7 +55,7 @@ export default function AttractionCard({ attraction }: AttractionCardProps) {
                   </span>
                 ))}
               </div>
-              <span className="text-sm text-gray-600">({attraction.reviews})</span>
+              <span className="text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>({attraction.reviews})</span>
             </div>
           </div>
         </div>
@@ -63,10 +63,10 @@ export default function AttractionCard({ attraction }: AttractionCardProps) {
         {/* Right Section */}
         <div className="md:col-span-1 flex flex-col justify-between items-end">
           <div className="text-right">
-            <p className="text-2xl font-bold text-gray-900">US${attraction.price}</p>
+            <p className="text-2xl font-bold text-gray-900" style={{ fontFamily: "Urbanist" }}>US${attraction.price}</p>
           </div>
 
-          <button className="px-6 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 font-semibold text-sm transition-colors">
+          <button className="px-6 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 font-semibold text-sm transition-colors" style={{ fontFamily: "Urbanist" }}>
             See availability →
           </button>
         </div>

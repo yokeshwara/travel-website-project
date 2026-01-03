@@ -26,12 +26,12 @@ export default function DealsSection() {
     <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Deals and Discounts</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12" style={{ fontFamily: "Urbanist" }}>Deals and Discounts</h2>
 
         {/* Deal Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {deals.map((deal) => (
-            <div key={deal.id} className="relative rounded-lg overflow-hidden group cursor-pointer">
+            <div key={deal.id} className="relative rounded-lg overflow-hidden group cursor-pointer" style={{ fontFamily: "Urbanist" }}>
               <div className="relative h-64 bg-gray-200">
                 <img
                   src={deal.image || "/placeholder.svg"}
@@ -41,13 +41,13 @@ export default function DealsSection() {
               </div>
 
               {/* Badge */}
-              <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded font-bold text-sm">
+              <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded font-bold text-sm" style={{ fontFamily: "Urbanist" }}>
                 {deal.badge}
               </div>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                <h3 className="text-white font-bold text-lg">{deal.title}</h3>
+                <h3 className="text-white font-bold text-lg" style={{ fontFamily: "Urbanist" }}>{deal.title}</h3>
               </div>
             </div>
           ))}
@@ -70,11 +70,11 @@ export default function DealsSection() {
 
                 <div className="md:col-span-2 flex flex-col justify-between">
                   <div>
-                    <p className="text-sm text-blue-600 font-semibold mb-1">Dubai</p>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                    <p className="text-sm text-blue-600 font-semibold mb-1" style={{ fontFamily: "Urbanist" }}>Dubai</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3" style={{ fontFamily: "Urbanist" }}>
                       Modern Visions of Dubai - Dubai Marina Cruise and Dubai Frame Visit
                     </h3>
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-sm text-gray-600 mb-4" style={{ fontFamily: "Urbanist" }}>
                       With the tour you get the chance to discover Dubai's that Present and Future Experience offers
                     </p>
                     <div className="flex items-center gap-2">
@@ -85,14 +85,14 @@ export default function DealsSection() {
                           </span>
                         ))}
                       </div>
-                      <span className="text-sm text-gray-600">(128)</span>
+                      <span className="text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>(128)</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="md:col-span-1 flex flex-col justify-between items-end">
-                  <p className="text-2xl font-bold text-gray-900">US$489</p>
-                  <button className="px-6 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 font-semibold text-sm">
+                  <p className="text-2xl font-bold text-gray-900" style={{ fontFamily: "Urbanist" }}>US$489</p>
+                  <button className="px-6 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 font-semibold text-sm" style={{ fontFamily: "Urbanist" }}>
                     See availability →
                   </button>
                 </div>

@@ -38,8 +38,8 @@ export function TeamSection() {
     <section className="py-16 md:py-24 lg:py-2">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "Urbanist" }}>Meet Our Team</h2>
+          <p className="text-muted-foreground max-w-3xl mx-auto text-pretty" style={{ fontFamily: "Urbanist" }}>
             Welcome to TravelTeam where your travel dreams take flight! We are not just another booking platform – we
             are your step dedicated the everything we need to turn your where travel desire into unforgettable
           </p>
@@ -59,8 +59,8 @@ export function TeamSection() {
               <div className="bg-primary text-white p-4 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-bold text-lg">{member.name}</h3>
-                    <p className="text-sm text-white/90">{member.role}</p>
+                    <h3 className="font-bold text-lg" style={{ fontFamily: "Urbanist" }}>{member.name}</h3>
+                    <p className="text-sm text-white/90" style={{ fontFamily: "Urbanist" }}>{member.role}</p>
                   </div>
 
                   <div className="flex gap-2">

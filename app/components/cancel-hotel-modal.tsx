@@ -32,10 +32,10 @@ export function CancelHotelModal({ isOpen, onClose }: CancelHotelModalProps) {
         {/* Header */}
         <div className="flex items-start justify-between p-5 border-b">
           <div>
-            <h1 className="text-lg font-bold text-slate-900 mb-1">
+            <h1 className="text-lg font-bold text-slate-900 mb-1" style={{ fontFamily: "Urbanist" }}>
               Are you sure you want to cancel?
             </h1>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-600" style={{ fontFamily: "Urbanist" }}>
               Cancel without penalty before deadline.
             </p>
           </div>
@@ -50,19 +50,19 @@ export function CancelHotelModal({ isOpen, onClose }: CancelHotelModalProps) {
         {/* Content */}
         <div className="p-5 space-y-5">
           {/* IDs */}
-          <div className="grid grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-2 gap-4 text-sm" style={{ fontFamily: "Urbanist" }}>
             <div>
               <p className="text-slate-500">Confirmation#</p>
               <p className="font-semibold">3527776784</p>
             </div>
             <div>
-              <p className="text-black-500">Navan Booking ID: IWXRBX</p>
+              <p className="text-black-500" style={{ fontFamily: "Urbanist" }}>Navan Booking ID: IWXRBX</p>
              
             </div>
           </div>
 
           {/* Info */}
-          <div className="bg-green-50 border border-green-200 rounded-md p-3 text-sm text-green-800">
+          <div className="bg-green-50 border border-green-200 rounded-md p-3 text-sm text-green-800" style={{ fontFamily: "Urbanist" }}>
            Change or cancel for free until Nov 10, 2024, 3:00 PM
           </div>
 
@@ -76,10 +76,10 @@ export function CancelHotelModal({ isOpen, onClose }: CancelHotelModalProps) {
               className="rounded-md object-cover"
             />
             <div>
-              <h2 className="font-semibold text-slate-900">
+              <h2 className="font-semibold text-slate-900" style={{ fontFamily: "Urbanist" }}>
                 Mövenpick Grand Al Bustan
               </h2>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-slate-600" style={{ fontFamily: "Urbanist" }}>
                 Casablanca Road, Dubai
               </p>
             </div>
@@ -87,15 +87,15 @@ export function CancelHotelModal({ isOpen, onClose }: CancelHotelModalProps) {
 
           {/* Price */}
           <div className="text-sm space-y-1">
-            <div className="flex justify-between">
+            <div className="flex justify-between" style={{ fontFamily: "Urbanist" }}>
               <span>Room / Night</span>
               <span className="font-semibold">$217.14</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between" style={{ fontFamily: "Urbanist" }}>
               <span>Taxes & Fees</span>
               <span className="font-semibold">$78.57</span>
             </div>
-            <div className="flex justify-between border-t pt-2 font-bold">
+            <div className="flex justify-between border-t pt-2 font-bold" style={{ fontFamily: "Urbanist" }}>
               <span>Total</span>
               <span>$381.06</span>
             </div>
@@ -139,12 +139,14 @@ export function CancelHotelModal({ isOpen, onClose }: CancelHotelModalProps) {
               onClick={onClose}
               variant="outline"
               className="flex-1"
+              style={{ fontFamily: "Urbanist" }}
             >
               Go Back
             </Button>
             <Button
               onClick={onClose}
               className="flex-1 bg-white-600 hover:bg-white-700 text-blue-700 border-gray-900"
+              style={{ fontFamily: "Urbanist" }}
             >
               Cancel Hotel
             </Button>

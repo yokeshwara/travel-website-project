@@ -1,3 +1,7 @@
+"use client"
+
+import { useRouter } from "next/navigation";
+
 const destinations = [
   {
     name: "Istanbul, Turkey",
@@ -47,17 +51,21 @@ const destinations = [
 ]
 
 export default function PlanTrip() {
+       const router = useRouter();
+       const morePlaces = () => {
+          router.push("/attractions-searchresults") // change route as needed
+        }
   return (
     <section className="py-16 lg:py-24 bg-background mt-20 lg:mt-32">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="flex justify-between items-end mb-10 lg:w-350">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-2">Plan your perfect trip</h2>
-            <p className="text-muted-foreground">Search Flights & Places Hire to our most popular destinations</p>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-2" style={{ fontFamily: "Urbanist" }}>Plan your perfect trip</h2>
+            <p className="text-muted-foreground" style={{ fontFamily: "Urbanist" }}>Search Flights & Places Hire to our most popular destinations</p>
           </div>
 
-          <button className="hidden md:block text-primary hover:underline font-medium">See more places</button>
+          <button onClick={morePlaces} className="hidden md:block text-primary hover:underline font-medium">See more places</button>
         </div>
 
         {/* Destination Grid */}
@@ -76,16 +84,16 @@ export default function PlanTrip() {
 
               {/* Right Content */}
               <div>
-                <h3 className="text-lg font-semibold mb-1">{destination.name}</h3>
+                <h3 className="text-lg font-semibold mb-1" style={{ fontFamily: "Urbanist" }}>{destination.name}</h3>
 
-                <p className="text-sm text-muted-foreground">{destination.tags.join(" · ")}</p>
+                <p className="text-sm text-muted-foreground" style={{ fontFamily: "Urbanist" }}>{destination.tags.join(" · ")}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Mobile Button */}
-        <button className="md:hidden text-primary hover:underline font-medium mt-8 mx-auto block">
+        <button onClick={morePlaces} className="md:hidden text-primary hover:underline font-medium mt-8 mx-auto block" style={{ fontFamily: "Urbanist" }}>
           See more places
         </button>
       </div>

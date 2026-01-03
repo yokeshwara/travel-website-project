@@ -30,10 +30,10 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Plane className="w-6 h-6 text-primary" />
-              <span className="text-xl font-bold">TRAVEL</span>
+              <span className="text-xl font-bold" style={{ fontFamily: "Urbanist" }}>TRAVEL</span>
             </div>
 
-            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed" style={{ fontFamily: "Urbanist" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor.
             </p>
@@ -52,31 +52,31 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4" style={{ fontFamily: "Urbanist" }}>Quick Links</h3>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/visascreen">Host A Venue</Link></li>
               <li><Link href="/blogs">Blog</Link></li>
-              <li><Link href="/searchresults">Hotel</Link></li>
+              <li><Link href="/find-stays">Hotel</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Get In Touch */}
           <div>
-            <h3 className="font-semibold mb-4">Get In Touch</h3>
+            <h3 className="font-semibold mb-4" style={{ fontFamily: "Urbanist" }}>Get In Touch</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-primary mt-0.5" />
+                <Phone className="w-4 h-4 text-primary mt-0.5" style={{ fontFamily: "Urbanist" }} />
                 +1 12345 67890
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-primary mt-0.5" />
+                <Mail className="w-4 h-4 text-primary mt-0.5" style={{ fontFamily: "Urbanist" }}/>
                 example@gmail.com
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary mt-0.5" style={{ fontFamily: "Urbanist" }} />
                 1014 N Main St, Miami, Oklahoma, 74354, United States
               </li>
             </ul>
@@ -84,7 +84,7 @@ export function Footer() {
 
           {/* Instagram */}
           <div>
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4" style={{ fontFamily: "Urbanist" }}>
               Follow Us On @instagram
             </h3>
 
@@ -109,7 +109,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-primary py-4">
-        <p className="text-center text-sm text-white">
+        <p className="text-center text-sm text-white" style={{ fontFamily: "Urbanist" }}>
           © 2023 All rights reserved
         </p>
       </div>

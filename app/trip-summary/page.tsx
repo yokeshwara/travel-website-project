@@ -45,7 +45,7 @@ export default function TravelBooking() {
         <div className="bg-blue-50 rounded-xl shadow-lg p-6 md:p-8 ">
           {/* Trip Summary */}
           <section className="mb-8" >
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Trip Summary</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Trip Summary</h2>
 
             {/* Outbound Flight */}
         <div className="mb-6">
@@ -55,8 +55,8 @@ export default function TravelBooking() {
     </div>
 
     <div className="flex flex-col">
-      <span className="text-sm text-gray-600">Thu, 30 May 2024</span>
-      <span className="font-medium text-gray-800">
+      <span className="text-sm text-gray-600"  style={{ fontFamily: "Urbanist" }}>Thu, 30 May 2024</span>
+      <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>
         Dubai (DBI) – London (LDN)
       </span>
     </div>
@@ -65,49 +65,49 @@ export default function TravelBooking() {
 
 
               <div className="grid md:grid-cols-4 gap-4 text-sm border-b pb-4">
-                <div className="text-gray-600 font-medium">Departure</div>
-                <div className="text-gray-600 font-medium lg:ml-90">Arrival</div>
-                <div className="text-gray-600 font-medium md:col-span-2 lg:ml-90">Class | Baggage Allowance</div>
+                <div className="text-gray-600 font-medium"  style={{ fontFamily: "Urbanist" }}>Departure</div>
+                <div className="text-gray-600 font-medium lg:ml-90"  style={{ fontFamily: "Urbanist" }}>Arrival</div>
+                <div className="text-gray-600 font-medium md:col-span-2 lg:ml-90"  style={{ fontFamily: "Urbanist" }}>Class | Baggage Allowance</div>
               </div>
 
               <div className="grid md:grid-cols-4 gap-4 pt-4 items-start">
                 <div>
-                  <div className="text-2xl font-bold text-gray-800">
+                  <div className="text-2xl font-bold text-gray-800"  style={{ fontFamily: "Urbanist" }}>
                     10:25 <span className="text-lg">DBI</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">International airport in</div>
-                  <div className="text-xs text-gray-600">Dubai, United Arab</div>
-                  <div className="text-xs text-gray-600">Emirates</div>
+                  <div className="text-xs text-gray-600 mt-1"  style={{ fontFamily: "Urbanist" }}>International airport in</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Dubai, United Arab</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Emirates</div>
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
                   <div className="w-12 h-12 border-2 border-gray-300 rounded-full flex items-center justify-center">
                     <Clock size={20} className="text-gray-600" />
                   </div>
-                  <div className="text-xs text-gray-600 mt-2">08 h 16 min</div>
-                  <div className="text-xs text-gray-600">1 stop</div>
+                  <div className="text-xs text-gray-600 mt-2"  style={{ fontFamily: "Urbanist" }}>08 h 16 min</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>1 stop</div>
                 </div>
 
                 <div>
                   <div className="text-2xl font-bold text-gray-800">
-                    18:25 <span className="text-lg">LDN</span>
+                    18:25 <span className="text-lg"  style={{ fontFamily: "Urbanist" }}>LDN</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">London City Airport</div>
-                  <div className="text-xs text-gray-600">Hartmann Rd, London</div>
-                  <div className="text-xs text-gray-600">E16 2PX, United</div>
-                  <div className="text-xs text-gray-600">Kingdom</div>
+                  <div className="text-xs text-gray-600 mt-1"  style={{ fontFamily: "Urbanist" }}>London City Airport</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Hartmann Rd, London</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>E16 2PX, United</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Kingdom</div>
                 </div>
 
                 <div className="text-right md:text-left">
   <div className="flex items-center justify-end md:justify-start gap-4">
-    <span className="text-sm text-gray-800">Economy (Q)</span>
+    <span className="text-sm text-gray-800"  style={{ fontFamily: "Urbanist" }}>Economy (Q)</span>
 
-    <button className="text-blue-600 text-sm hover:underline lg:ml-50">
+    <button className="text-blue-600 text-sm hover:underline lg:ml-50"  style={{ fontFamily: "Urbanist" }}>
       + More
     </button>
   </div>
 
-  <span className="block text-sm text-gray-800 mt-1">
+  <span className="block text-sm text-gray-800 mt-1"  style={{ fontFamily: "Urbanist" }}>
     Adult: 30kg
   </span>
 </div>
@@ -124,8 +124,8 @@ export default function TravelBooking() {
                 </div>
 
                   <div className="flex flex-col">
-      <span className="text-sm text-gray-600">Sat, 15 Jun</span>
-      <span className="font-medium text-gray-800">
+      <span className="text-sm text-gray-600"  style={{ fontFamily: "Urbanist" }}>Sat, 15 Jun</span>
+      <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>
        London (LDN) – Dubai (DBI)
       </span>
     </div>
@@ -133,49 +133,49 @@ export default function TravelBooking() {
               </div>
 
               <div className="grid md:grid-cols-4 gap-4 text-sm border-b pb-4">
-                <div className="text-gray-600 font-medium">Departure</div>
-                <div className="text-gray-600 font-medium  lg:ml-90">Arrival</div>
-                <div className="text-gray-600 font-medium md:col-span-2  lg:ml-90">Class | Baggage Allowance</div>
+                <div className="text-gray-600 font-medium"  style={{ fontFamily: "Urbanist" }}>Departure</div>
+                <div className="text-gray-600 font-medium  lg:ml-90"  style={{ fontFamily: "Urbanist" }}>Arrival</div>
+                <div className="text-gray-600 font-medium md:col-span-2  lg:ml-90"  style={{ fontFamily: "Urbanist" }}>Class | Baggage Allowance</div>
               </div>
 
               <div className="grid md:grid-cols-4 gap-4 pt-4 items-start">
                 <div>
                   <div className="text-2xl font-bold text-gray-800">
-                    10:25 <span className="text-lg">LDN</span>
+                    10:25 <span className="text-lg"  style={{ fontFamily: "Urbanist" }}>LDN</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">London City Airport</div>
-                  <div className="text-xs text-gray-600">Hartmann Rd, London</div>
-                  <div className="text-xs text-gray-600">E16 2PX, United</div>
-                  <div className="text-xs text-gray-600">Kingdom</div>
+                  <div className="text-xs text-gray-600 mt-1"  style={{ fontFamily: "Urbanist" }}>London City Airport</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Hartmann Rd, London</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>E16 2PX, United</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Kingdom</div>
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
                   <div className="w-12 h-12 border-2 border-gray-300 rounded-full flex items-center justify-center">
                     <Clock size={20} className="text-gray-600" />
                   </div>
-                  <div className="text-xs text-gray-600 mt-2">08 h 16 min</div>
-                  <div className="text-xs text-gray-600">1 stop</div>
+                  <div className="text-xs text-gray-600 mt-2"  style={{ fontFamily: "Urbanist" }}>08 h 16 min</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>1 stop</div>
                 </div>
 
                 <div>
-                  <div className="text-2xl font-bold text-gray-800">
+                  <div className="text-2xl font-bold text-gray-800"  style={{ fontFamily: "Urbanist" }}>
                     18:25 <span className="text-lg">DBI</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">International airport in</div>
-                  <div className="text-xs text-gray-600">Dubai, United Arab</div>
-                  <div className="text-xs text-gray-600">Emirates</div>
+                  <div className="text-xs text-gray-600 mt-1"  style={{ fontFamily: "Urbanist" }}>International airport in</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Dubai, United Arab</div>
+                  <div className="text-xs text-gray-600"  style={{ fontFamily: "Urbanist" }}>Emirates</div>
                 </div>
 
                  <div className="text-right md:text-left">
   <div className="flex items-center justify-end md:justify-start gap-4">
-    <span className="text-sm text-gray-800">Economy (Q)</span>
+    <span className="text-sm text-gray-800"  style={{ fontFamily: "Urbanist" }}>Economy (Q)</span>
 
     <button className="text-blue-600 text-sm hover:underline lg:ml-50">
       + More
     </button>
   </div>
 
-  <span className="block text-sm text-gray-800 mt-1">
+  <span className="block text-sm text-gray-800 mt-1"  style={{ fontFamily: "Urbanist" }}>
     Adult: 30kg
   </span>
 </div>
@@ -187,29 +187,29 @@ export default function TravelBooking() {
 
           {/* Passenger Details */}
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Passenger Details</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Passenger Details</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b">
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Passenger Name</th>
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Passport</th>
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Date of birth</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Passenger Name</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Passport</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Date of birth</th>
                     <th className="text-left py-3 px-2 font-medium text-gray-600">Type</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b">
-                    <td className="py-3 px-2 text-gray-800">David</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>David</td>
                     <td className="py-3 px-2 text-gray-500">-</td>
-                    <td className="py-3 px-2 text-gray-800">5 April 1993</td>
-                    <td className="py-3 px-2 text-gray-800">Adult</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>5 April 1993</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Adult</td>
                   </tr>
                   <tr className="border-b">
-                    <td className="py-3 px-2 text-gray-800">John Doe</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>John Doe</td>
                     <td className="py-3 px-2 text-gray-500">-</td>
-                    <td className="py-3 px-2 text-gray-800">23 June 1996</td>
-                    <td className="py-3 px-2 text-gray-800">Adult</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>23 June 1996</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Adult</td>
                   </tr>
                 </tbody>
               </table>
@@ -218,23 +218,23 @@ export default function TravelBooking() {
 
           {/* Contact Details */}
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Contact Details</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Contact Details</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b">
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Passenger Name</th>
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Type</th>
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Email</th>
-                    <th className="text-left py-3 px-2 font-medium text-gray-600">Number</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Passenger Name</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Type</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Email</th>
+                    <th className="text-left py-3 px-2 font-medium text-gray-600"   style={{ fontFamily: "Urbanist" }}>Number</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="py-3 px-2 text-gray-800">David</td>
-                    <td className="py-3 px-2 text-gray-800">Primary Passenger</td>
-                    <td className="py-3 px-2 text-gray-800">example@gmail.com</td>
-                    <td className="py-3 px-2 text-gray-800">08-87556632</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>David</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }} >Primary Passenger</td>
+                    <td className="py-3 px-2 text-gray-800" style={{ fontFamily: "Urbanist" }}>example@gmail.com</td>
+                    <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>08-87556632</td>
                   </tr>
                 </tbody>
               </table>
@@ -243,30 +243,30 @@ export default function TravelBooking() {
 
           {/* Seats */}
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Seats</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Seats</h2>
 
             {/* Dubai - London */}
             <div className="mb-6">
-              <h3 className="text-lg font-medium mb-4 text-gray-800">Dubai - London</h3>
+              <h3 className="text-lg font-medium mb-4 text-gray-800"  style={{ fontFamily: "Urbanist" }}>Dubai - London</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b">
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">Passenger</th>
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">DBI - LDN</th>
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">LDN - DBI</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Passenger</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>DBI - LDN</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>LDN - DBI</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b">
-                      <td className="py-3 px-2 text-gray-800">David</td>
-                      <td className="py-3 px-2 text-gray-800">19D B666 D PKR</td>
-                      <td className="py-3 px-2 text-gray-800">No seat selected</td>
+                    <tr className="border-b"> 
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>David</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>19D B666 D PKR</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>No seat selected</td>
                     </tr>
                     <tr>
-                      <td className="py-3 px-2 text-gray-800">John Doe</td>
-                      <td className="py-3 px-2 text-gray-800">19D B666 D PKR</td>
-                      <td className="py-3 px-2 text-gray-800">No seat selected</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>John Doe</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>19D B666 D PKR</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>No seat selected</td>
                     </tr>
                   </tbody>
                 </table>
@@ -275,26 +275,26 @@ export default function TravelBooking() {
 
             {/* London - Dubai */}
             <div>
-              <h3 className="text-lg font-medium mb-4 text-gray-800">London - Dubai</h3>
+              <h3 className="text-lg font-medium mb-4 text-gray-800"  style={{ fontFamily: "Urbanist" }}>London - Dubai</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b">
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">Passenger</th>
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">DBI - LDN</th>
-                      <th className="text-left py-3 px-2 font-medium text-gray-600">LDN - DBI</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>Passenger</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>DBI - LDN</th>
+                      <th className="text-left py-3 px-2 font-medium text-gray-600"  style={{ fontFamily: "Urbanist" }}>LDN - DBI</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="py-3 px-2 text-gray-800">David</td>
-                      <td className="py-3 px-2 text-gray-800">19D B666 D PKR</td>
-                      <td className="py-3 px-2 text-gray-800">No seat selected</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>David</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>19D B666 D PKR</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>No seat selected</td>
                     </tr>
                     <tr>
-                      <td className="py-3 px-2 text-gray-800">John Doe</td>
-                      <td className="py-3 px-2 text-gray-800">19D B666 D PKR</td>
-                      <td className="py-3 px-2 text-gray-800">No seat selected</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>John Doe</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>19D B666 D PKR</td>
+                      <td className="py-3 px-2 text-gray-800"  style={{ fontFamily: "Urbanist" }}>No seat selected</td>
                     </tr>
                   </tbody>
                 </table>
@@ -308,11 +308,11 @@ export default function TravelBooking() {
               onClick={() => setPurchaseConditionsOpen(!purchaseConditionsOpen)}
               className="w-full flex items-center justify-between py-4 px-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition"
             >
-              <span className="text-lg font-semibold text-gray-800">Purchase Conditions</span>
+              <span className="text-lg font-semibold text-gray-800"  style={{ fontFamily: "Urbanist" }}>Purchase Conditions</span>
               {purchaseConditionsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </button>
             {purchaseConditionsOpen && (
-              <div className="p-4 bg-gray-50 text-sm text-gray-600 mt-1 rounded-b-lg">
+              <div className="p-4 bg-gray-50 text-sm text-gray-600 mt-1 rounded-b-lg"  style={{ fontFamily: "Urbanist" }}>
                 Purchase conditions content goes here...
               </div>
             )}
@@ -324,11 +324,11 @@ export default function TravelBooking() {
               onClick={() => setRefundRulesOpen(!refundRulesOpen)}
               className="w-full flex items-center justify-between py-4 px-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition"
             >
-              <span className="text-lg font-semibold text-gray-800">Refund Fare Rules</span>
+              <span className="text-lg font-semibold text-gray-800"  style={{ fontFamily: "Urbanist" }}>Refund Fare Rules</span>
               {refundRulesOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </button>
             {refundRulesOpen && (
-              <div className="p-4 bg-gray-50 text-sm text-gray-600 mt-1 rounded-b-lg">
+              <div className="p-4 bg-gray-50 text-sm text-gray-600 mt-1 rounded-b-lg"  style={{ fontFamily: "Urbanist" }}>
                 Refund fare rules content goes here...
               </div>
             )}
@@ -342,19 +342,19 @@ export default function TravelBooking() {
                 onClick={() => setVoucherOpen(!voucherOpen)}
                 className="w-full flex items-center justify-between py-3 mb-4"
               >
-                <span className="text-lg font-semibold text-gray-800">Redeem Voucher</span>
+                <span className="text-lg font-semibold text-gray-800"  style={{ fontFamily: "Urbanist" }}>Redeem Voucher</span>
                 {voucherOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </button>
 
               {voucherOpen && (
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-gray-700">APPLY ONE VOUCHER PER PERSON</span>
-                    <button className="text-sm text-blue-600 hover:underline">Help</button>
+                    <span className="text-sm text-gray-700"  style={{ fontFamily: "Urbanist" }} >APPLY ONE VOUCHER PER PERSON</span>
+                    <button className="text-sm text-blue-600 hover:underline"  style={{ fontFamily: "Urbanist" }}>Help</button>
                   </div>
 
                   <div className="flex gap-2 mb-4">
-                    <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm">
+                    <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-sm"  style={{ fontFamily: "Urbanist" }}>
                       <option>David</option>
                     </select>
                     <input
@@ -368,10 +368,10 @@ export default function TravelBooking() {
                   </div>
 
                   <div className="flex gap-2">
-                    <button className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 transition">
+                    <button className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm hover:bg-blue-50 transition"  style={{ fontFamily: "Urbanist" }}>
                       Add one other voucher
                     </button>
-                    <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition">
+                    <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition"  style={{ fontFamily: "Urbanist" }}>
                       Submit Voucher
                     </button>
                   </div>
@@ -381,19 +381,19 @@ export default function TravelBooking() {
 
             {/* Total Price */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Total Price</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4"  style={{ fontFamily: "Urbanist" }}>Total Price</h3>
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Trip price</span>
-                  <span className="font-medium text-gray-800">PKR 40080.00</span>
+                  <span className="text-gray-600"  style={{ fontFamily: "Urbanist" }}>Trip price</span>
+                  <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>PKR 40080.00</span>
                 </div>
                 <div className="flex justify-between text-sm pb-3 border-b">
-                  <span className="text-gray-600">Platform taxes (for all passengers)</span>
-                  <span className="font-medium text-gray-800">PKR 17580.00</span>
+                  <span className="text-gray-600"  style={{ fontFamily: "Urbanist" }}>Platform taxes (for all passengers)</span>
+                  <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>PKR 17580.00</span>
                 </div>
                 <div className="flex justify-between pt-2">
-                  <span className="text-lg font-semibold text-gray-800">Payable amount</span>
-                  <span className="text-lg font-bold text-gray-800">PKR 57680.00</span>
+                  <span className="text-lg font-semibold text-gray-800"  style={{ fontFamily: "Urbanist" }}>Payable amount</span>
+                  <span className="text-lg font-bold text-gray-800"  style={{ fontFamily: "Urbanist" }}>PKR 57680.00</span>
                 </div>
               </div>
             </div>
@@ -401,7 +401,7 @@ export default function TravelBooking() {
 
           {/* Payment Method */}
           <section className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Choose how to pag</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4"  style={{ fontFamily: "Urbanist" }}>Choose how to pag</h3>
             <div className="grid grid-cols-2 gap-4">
               <button
                 onClick={() => setPaymentMethod("pay-now")}
@@ -416,7 +416,7 @@ export default function TravelBooking() {
                 >
                   {paymentMethod === "pay-now" && <div className="w-3 h-3 rounded-full bg-blue-600"></div>}
                 </div>
-                <span className="font-medium text-gray-800">Pay Now</span>
+                <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>Pay Now</span>
               </button>
 
               <button
@@ -434,15 +434,15 @@ export default function TravelBooking() {
                 >
                   {paymentMethod === "cash-avail" && <div className="w-3 h-3 rounded-full bg-blue-600 "></div>}
                 </div>
-                <span className="font-medium text-gray-800">Cash + Avail</span>
+                <span className="font-medium text-gray-800"  style={{ fontFamily: "Urbanist" }}>Cash + Avail</span>
               </button>
             </div>
           </section>
 
           {/* Final Amount */}
           <div className="text-center mb-6 lg:text-right">
-            <p className="text-2xl font-bold text-gray-800">
-              Payable amount : <span className="text-gray-800">PKR 56809.00</span>
+            <p className="text-2xl font-bold text-gray-800"  style={{ fontFamily: "Urbanist" }}>
+              Payable amount : <span className="text-gray-800"  style={{ fontFamily: "Urbanist" }}>PKR 56809.00</span>
             </p>
           </div>
 
@@ -456,17 +456,17 @@ export default function TravelBooking() {
                 onChange={(e) => setTermsAccepted(e.target.checked)}
                 className="mt-1 w-4 h-4 text-blue-600"
               />
-              <label htmlFor="terms" className="text-sm text-gray-600">
+              <label htmlFor="terms" className="text-sm text-gray-600"  style={{ fontFamily: "Urbanist" }}>
                 I have read and accept the{" "}
-                <a href="#" className="text-blue-600 hover:underline">
+                <a href="#" className="text-blue-600 hover:underline"  style={{ fontFamily: "Urbanist" }}>
                   terms and conditions
                 </a>
                 ,{" "}
-                <a href="#" className="text-blue-600 hover:underline">
+                <a href="#" className="text-blue-600 hover:underline"  style={{ fontFamily: "Urbanist" }}>
                   fare and refund rules
                 </a>{" "}
-                stated above, and{" "}
-                <a href="#" className="text-blue-600 hover:underline">
+                stated above, and{" "}  
+                <a href="#" className="text-blue-600 hover:underline"  style={{ fontFamily: "Urbanist" }}>
                   general conditions of carriage
                 </a>{" "}
                 applicable to my flight
@@ -474,7 +474,7 @@ export default function TravelBooking() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-end">
-              <button className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition">
+              <button className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition"  style={{ fontFamily: "Urbanist" }}>
                 Back
               </button>
               <button
@@ -485,6 +485,7 @@ export default function TravelBooking() {
                     ? "bg-blue-600 text-white hover:bg-blue-700"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
+                 style={{ fontFamily: "Urbanist" }}
               >
                 Purchase
               </button>

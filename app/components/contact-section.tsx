@@ -52,8 +52,8 @@ export default function ContactSection() {
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center h-[calc(100%-80px)] text-center">
-          <p className="text-white text-sm md:text-base mt-30 font-semibold">Contact</p>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
+          <p className="text-white text-sm md:text-base mt-30 font-semibold" style={{ fontFamily: "Urbanist" }}>Contact</p>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide" style={{ fontFamily: "Urbanist" }}>
             WE ARE ALWAYS OPEN TO TALK
           </h2>
         </div>
@@ -61,14 +61,14 @@ export default function ContactSection() {
 
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-12 md:py-20">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 md:mb-16 text-gray-800">Contact With Us</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 md:mb-16 text-gray-800" style={{ fontFamily: "Urbanist" }}>Contact With Us</h2>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start lg:ml-40">
           {/* LEFT SIDE */}
           <div>
-            <h3 className="text-xl font-semibold text-[#0B1B3A] mb-3">Get In Touch</h3>
+            <h3 className="text-xl font-semibold text-[#0B1B3A] mb-3" style={{ fontFamily: "Urbanist" }}>Get In Touch</h3>
 
-            <p className="text-sm text-gray-500 max-w-sm mb-10 leading-6">
+            <p className="text-sm text-gray-500 max-w-sm mb-10 leading-6" style={{ fontFamily: "Urbanist" }}>
               Please let us know if you have any questions or concerns and we will get back to you
             </p>
 
@@ -80,8 +80,8 @@ export default function ContactSection() {
                   <Mail className="w-5 h-5 text-[#0B1B3A]" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#0B1B3A]">Email Address</p>
-                  <p className="text-sm text-gray-500">marketing@example.com</p>
+                  <p className="text-sm font-semibold text-[#0B1B3A]" style={{ fontFamily: "Urbanist" }}>Email Address</p>
+                  <p className="text-sm text-gray-500" style={{ fontFamily: "Urbanist" }}>marketing@example.com</p>
                 </div>
               </div>
 
@@ -91,8 +91,8 @@ export default function ContactSection() {
                   <Phone className="w-5 h-5 text-[#0B1B3A]" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#0B1B3A]">Phone number</p>
-                  <p className="text-sm text-gray-500">+34-455-5432-236</p>
+                  <p className="text-sm font-semibold text-[#0B1B3A]" style={{ fontFamily: "Urbanist" }}>Phone number</p>
+                  <p className="text-sm text-gray-500" style={{ fontFamily: "Urbanist" }}>+34-455-5432-236</p>
                 </div>
               </div>
 
@@ -102,8 +102,8 @@ export default function ContactSection() {
                   <MapPin className="w-5 h-5 text-[#0B1B3A]" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#0B1B3A]">Location</p>
-                  <p className="text-sm text-gray-500 max-w-xs">2464 Royal Ln. Mesa, New Jersey 45463</p>
+                  <p className="text-sm font-semibold text-[#0B1B3A]" style={{ fontFamily: "Urbanist" }}>Location</p>
+                  <p className="text-sm text-gray-500 max-w-xs" style={{ fontFamily: "Urbanist" }}>2464 Royal Ln. Mesa, New Jersey 45463</p>
                 </div>
               </div>
             </div>
@@ -116,35 +116,35 @@ export default function ContactSection() {
 
           {/* RIGHT SIDE FORM */}
           <div>
-            <h3 className="text-xl font-semibold text-[#0B1B3A] mb-8">Send A Message</h3>
+            <h3 className="text-xl font-semibold text-[#0B1B3A] mb-8" style={{ fontFamily: "Urbanist" }}>Send A Message</h3>
 
             <form className="space-y-6 max-w-md">
               {/* Full Name */}
               <div>
-                <label className="block text-sm font-medium text-[#0B1B3A] mb-2">Full Name</label>
+                <label className="block text-sm font-medium text-[#0B1B3A] mb-2" style={{ fontFamily: "Urbanist" }}>Full Name</label>
                 <Input placeholder="Full Name" className="h-12" />
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-sm font-medium text-[#0B1B3A] mb-2">Phone</label>
+                <label className="block text-sm font-medium text-[#0B1B3A] mb-2"  style={{ fontFamily: "Urbanist" }}>Phone</label>
                 <Input placeholder="Enter your phone" className="h-12" />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-[#0B1B3A] mb-2">Email</label>
+                <label className="block text-sm font-medium text-[#0B1B3A] mb-2" style={{ fontFamily: "Urbanist" }}>Email</label>
                 <Input placeholder="Enter your email" className="h-12" />
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium text-[#0B1B3A] mb-2">Message</label>
+                <label className="block text-sm font-medium text-[#0B1B3A] mb-2" style={{ fontFamily: "Urbanist" }}>Message</label>
                 <Textarea placeholder="Type message..." rows={2} className="resize-none" />
               </div>
 
               {/* BUTTON */}
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-sm">Send Message</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-sm" style={{ fontFamily: "Urbanist" }}>Send Message</Button>
             </form>
           </div>
         </div>
@@ -155,13 +155,13 @@ export default function ContactSection() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-white text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-semibold mb-2">Subscribe for</h3>
-              <p className="text-xl md:text-2xl">Latest Newsletter</p>
+              <h3 className="text-2xl md:text-3xl font-semibold mb-2" style={{ fontFamily: "Urbanist" }}>Subscribe for</h3>
+              <p className="text-xl md:text-2xl" style={{ fontFamily: "Urbanist" }}>Latest Newsletter</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
               <Input type="email" placeholder="Your Email Address" className="bg-white w-full sm:w-80 px-6 py-6" />
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 whitespace-nowrap">
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 whitespace-nowrap" style={{ fontFamily: "Urbanist" }}>
                 Subscribe
               </Button>
             </div>

@@ -12,7 +12,7 @@ export default function NewHeader() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Left Navigation */}
-            <nav className="hidden lg:flex items-center gap-6 text-sm">
+            <nav className="hidden lg:flex items-center gap-6 text-sm" style={{ fontFamily: "Urbanist" }}>
               <a href="/" className="flex items-center gap-2 hover:text-white/90 transition">
                 <Plane className="w-4 h-4" />
                 Find Flight
@@ -52,20 +52,20 @@ export default function NewHeader() {
           </div>
 
           {/* Mobile Navigation */}
-          <nav className="lg:hidden flex items-center justify-between pb-4 text-xs border-t border-white/20 pt-4">
-            <a href="/" className="flex flex-col items-center gap-1">
+          <nav className="lg:hidden flex items-center justify-between pb-4 text-xs border-t border-white/20 pt-4" style={{ fontFamily: "Urbanist" }}>
+            <a href="/" className="flex flex-col items-center gap-1" style={{ fontFamily: "Urbanist" }}>
               <Plane className="w-4 h-4" />
               <span>Flight</span>
             </a>
-            <a href="/find-stays" className="flex flex-col items-center gap-1">
+            <a href="/find-stays" className="flex flex-col items-center gap-1" style={{ fontFamily: "Urbanist" }}>
               <Building2 className="w-4 h-4" />
               <span>Stays</span>
             </a>
-            <a href="#" className="flex flex-col items-center gap-1">
+            <a href="#" className="flex flex-col items-center gap-1" style={{ fontFamily: "Urbanist" }}>
               <Car className="w-4 h-4" />
               <span>Taxi</span>
             </a>
-            <a href="/find-stays" className="flex flex-col items-center gap-1">
+            <a href="/find-stays" className="flex flex-col items-center gap-1" style={{ fontFamily: "Urbanist" }}>
               <MapPin className="w-4 h-4" />
               <span>Stays</span>
             </a>

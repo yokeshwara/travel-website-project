@@ -33,7 +33,7 @@ export default function DealsAndDiscounts() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-16">Deals and Discounts</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-16" style={{ fontFamily: "Urbanist" }}>Deals and Discounts</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {deals.map((deal) => (
@@ -48,7 +48,7 @@ export default function DealsAndDiscounts() {
               />
 
               {/* Badge */}
-              <div className="absolute top-3 left-3 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
+              <div className="absolute top-3 left-3 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold" style={{ fontFamily: "Urbanist" }}>
                 {deal.badge}
               </div>
 
@@ -57,8 +57,8 @@ export default function DealsAndDiscounts() {
 
               {/* Text Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h3 className="text-lg sm:text-xl font-bold mb-1">{deal.title}</h3>
-                <p className="text-sm text-gray-200">{deal.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-1" style={{ fontFamily: "Urbanist" }}>{deal.title}</h3>
+                <p className="text-sm text-gray-200" style={{ fontFamily: "Urbanist" }}>{deal.description}</p>
               </div>
             </div>
           ))}

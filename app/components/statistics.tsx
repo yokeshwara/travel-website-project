@@ -38,8 +38,8 @@ export default function Statistics() {
                   <stat.icon className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <div className="text-3xl lg:text-4xl font-bold mb-2">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-3xl lg:text-4xl font-bold mb-2" style={{ fontFamily: "Urbanist" }}>{stat.value}</div>
+              <div className="text-sm text-muted-foreground" style={{ fontFamily: "Urbanist" }}>{stat.label}</div>
             </div>
           ))}
         </div>

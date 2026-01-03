@@ -51,7 +51,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
   return (
     <div className="w-full">
       {/* Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4" style={{ fontFamily: "Urbanist" }}>
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <a href="/" className="hover:text-blue-600">
             Home
@@ -70,8 +70,8 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
         {/* Title Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{attraction.title}</h1>
-            <p className="text-gray-600 text-sm mb-3">{attraction.subtitle}</p>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>{attraction.title}</h1>
+            <p className="text-gray-600 text-sm mb-3" style={{ fontFamily: "Urbanist" }}>{attraction.subtitle}</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <div className="flex">
@@ -79,12 +79,12 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                     <Star key={i} size={16} className={i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"} />
                   ))}
                 </div>
-                <span className="font-semibold">{attraction.rating}</span>
-                <span className="text-gray-600 text-sm">({attraction.reviews} reviews)</span>
+                <span className="font-semibold" style={{ fontFamily: "Urbanist" }}>{attraction.rating}</span>
+                <span className="text-gray-600 text-sm" style={{ fontFamily: "Urbanist" }}>({attraction.reviews} reviews)</span>
               </div>
             </div>
           </div>
-          <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 md:whitespace-nowrap">
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 md:whitespace-nowrap" style={{ fontFamily: "Urbanist" }}>
             <Share2 size={18} />
             Share this attraction
           </button>
@@ -123,7 +123,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
               <div className="flex items-start gap-3">
                 <div className="text-green-600 font-bold text-xl">✓</div>
-                <div>
+                <div style={{ fontFamily: "Urbanist" }}>
                   <p className="font-semibold text-green-900">Free cancellation available</p>
                   <p className="text-sm text-green-800">Service animals welcome</p>
                 </div>
@@ -132,12 +132,12 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
 
             {/* Description and Details */}
             <div className="mb-8">
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-6" style={{ fontFamily: "Urbanist" }}>
                 This experience will give you the chance to go on a desert safari and enjoy unforgettable and natural
                 authentic and traditional entertainment along with the opportunity to enjoy a traditional barbecue
                 dinner.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed" style={{ fontFamily: "Urbanist" }}>
                 This experience will give you the chance to go on a desert safari and enjoy unforgettable and natural
                 authentic and traditional entertainment along with the opportunity to enjoy the chance to enjoy a
                 traditional barbecue dinner and will have the opportunity to enjoy the chance to enjoy a traditional
@@ -148,7 +148,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             {/* What's Included / Not Included */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="font-bold text-lg mb-4">What's included</h3>
+                <h3 className="font-bold text-lg mb-4" style={{ fontFamily: "Urbanist" }}>What's included</h3>
                 <ul className="space-y-3">
                   {[
                     "Sandboarding",
@@ -169,7 +169,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-4">What's not included</h3>
+                <h3 className="font-bold text-lg mb-4" style={{ fontFamily: "Urbanist" }}>What's not included</h3>
                 <ul className="space-y-3">
                   {[
                     "Alcoholic beverages",
@@ -188,7 +188,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             </div>
 
             {/* Health & Safety */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8" style={{ fontFamily: "Urbanist" }}>
               <h3 className="font-bold text-lg mb-4">Health & safety</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Not recommended for pregnant women</li>
@@ -199,13 +199,13 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             </div>
 
             {/* Restrictions */}
-            <div className="mb-8">
+            <div className="mb-8" style={{ fontFamily: "Urbanist" }}>
               <h3 className="font-bold text-lg mb-4">Restrictions</h3>
               <p className="text-gray-700">Please only interact in a fun environment as instructed during Ramadan.</p>
             </div>
 
             {/* Languages */}
-            <div className="mb-8">
+            <div className="mb-8" style={{ fontFamily: "Urbanist" }}>
               <h3 className="font-bold text-lg mb-4">Languages spoken by guide</h3>
               <div className="flex flex-wrap gap-2">
                 {["Arabic", "English"].map((lang) => (
@@ -217,7 +217,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
             </div>
 
             {/* Location Map */}
-            <div className="mb-8">
+            <div className="mb-8" style={{ fontFamily: "Urbanist" }}>
               <h3 className="font-bold text-lg mb-4">Location</h3>
               <div className="relative w-full h-80 rounded-lg overflow-hidden bg-gray-200 mb-4">
                 <Image
@@ -234,30 +234,30 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
               <div className="flex items-start gap-3">
                 <MapPin className="text-blue-600 mt-1" size={20} />
                 <div>
-                  <h4 className="font-semibold mb-2">Pick-up point</h4>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <h4 className="font-semibold mb-2" style={{ fontFamily: "Urbanist" }}>Pick-up point</h4>
+                  <p className="text-gray-600 text-sm mb-4" style={{ fontFamily: "Urbanist" }}>
                     Please note that pickup will run until all returns are available from accommodation and hotels in
                     Dubai and these shall be confirmed with the client.
                   </p>
-                  <button className="text-blue-600 hover:underline text-sm font-semibold">Learn more</button>
+                  <button className="text-blue-600 hover:underline text-sm font-semibold" style={{ fontFamily: "Urbanist" }}>Learn more</button>
                 </div>
               </div>
             </div>
 
             {/* User Reviews */}
             <div className="mb-8">
-              <h3 className="font-bold text-2xl mb-6">User settings</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h3 className="font-bold text-2xl mb-6" style={{ fontFamily: "Urbanist" }}>User settings</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6" style={{ fontFamily: "Urbanist" }}>
                 {[
                   { rating: 4.7, label: "Tour Cleanliness", reviews: 234 },
                   { rating: 4.6, label: "Tour times", reviews: 234 },
                   { rating: 4.3, label: "Quality of service", reviews: 234 },
                   { rating: 4.8, label: "Kind of food", reviews: 234 },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-4">
+                  <div key={idx} className="flex items-center gap-4" style={{ fontFamily: "Urbanist" }}>
                     <div>
                       <div className="flex items-center gap-1">
-                        <span className="font-bold text-lg">{item.rating}</span>
+                        <span className="font-bold text-lg" style={{ fontFamily: "Urbanist" }}>{item.rating}</span>
                         <div className="flex">
                           {[...Array(5)].map((_, i) => (
                             <Star
@@ -270,7 +270,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                           ))}
                         </div>
                       </div>
-                      <p className="text-xs text-gray-600">{item.reviews} reviews</p>
+                      <p className="text-xs text-gray-600" style={{ fontFamily: "Urbanist" }}>{item.reviews} reviews</p>
                     </div>
                   </div>
                 ))}
@@ -279,7 +279,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
 
             {/* What Guests Loved Most */}
             <div className="mb-8">
-              <h3 className="font-bold text-2xl mb-6">What guests loved most</h3>
+              <h3 className="font-bold text-2xl mb-6" style={{ fontFamily: "Urbanist" }}>What guests loved most</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
@@ -304,11 +304,11 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                         />
                       </div>
                       <div>
-                        <p className="font-semibold text-sm">{review.name}</p>
-                        <p className="text-xs text-gray-600">Based on last 50+ bookings</p>
+                        <p className="font-semibold text-sm" style={{ fontFamily: "Urbanist" }}>{review.name}</p>
+                        <p className="text-xs text-gray-600" style={{ fontFamily: "Urbanist" }}>Based on last 50+ bookings</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-700">{review.text}</p>
+                    <p className="text-sm text-gray-700" style={{ fontFamily: "Urbanist" }}>{review.text}</p>
                   </div>
                 ))}
               </div>
@@ -316,7 +316,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
 
             {/* FAQs */}
             <div className="mb-8">
-              <h3 className="font-bold text-2xl mb-6">Frequently asked questions</h3>
+              <h3 className="font-bold text-2xl mb-6" style={{ fontFamily: "Urbanist" }}>Frequently asked questions</h3>
               <div className="space-y-3">
                 {faqs.map((faq, idx) => (
                   <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -324,7 +324,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                       onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                       className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-gray-900">{faq.question}</span>
+                      <span className="font-semibold text-gray-900" style={{ fontFamily: "Urbanist" }}>{faq.question}</span>
                       {expandedFaq === idx ? (
                         <ChevronUp size={20} className="text-gray-600" />
                       ) : (
@@ -333,7 +333,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                     </button>
                     {expandedFaq === idx && (
                       <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                        <p className="text-gray-700">{faq.answer}</p>
+                        <p className="text-gray-700" style={{ fontFamily: "Urbanist" }}>{faq.answer}</p>
                       </div>
                     )}
                   </div>
@@ -345,11 +345,11 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
           {/* Right Sidebar - Booking Form */}
           <div className="lg:col-span-1">
             <div className="bg-white border border-gray-200 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-lg mb-6">Tickets and prices</h3>
+              <h3 className="font-bold text-lg mb-6" style={{ fontFamily: "Urbanist" }}>Tickets and prices</h3>
 
               {/* Date Selection */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                <label className="block text-sm font-semibold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>
                   Search ticket availability by date
                 </label>
                 <input
@@ -358,16 +358,17 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                   onChange={(e) => setSelectedDate(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                <p className="text-xs text-gray-500 mt-2">Min Date - (4 Dec 27)</p>
+                <p className="text-xs text-gray-500 mt-2" style={{ fontFamily: "Urbanist" }}>Min Date - (4 Dec 27)</p>
               </div>
 
               {/* Time Selection */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Select time</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>Select time</label>
                 <select
                   value={selectedTime}
                   onChange={(e) => setSelectedTime(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontFamily: "Urbanist" }}
                 >
                   <option value="">Select a time</option>
                   <option value="3pm">3:00 PM</option>
@@ -379,7 +380,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
               {/* Quantity Selection */}
               <div className="mb-6 space-y-3">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">Adults</label>
+                  <label className="block text-sm font-semibold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>Adults</label>
                   <div className="flex items-center border border-gray-300 rounded-lg">
                     <button onClick={() => setAdults(Math.max(1, adults - 1))} className="px-3 py-2 hover:bg-gray-100">
                       −
@@ -392,7 +393,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">Children</label>
+                  <label className="block text-sm font-semibold text-gray-900 mb-2" style={{ fontFamily: "Urbanist" }}>Children</label>
                   <div className="flex items-center border border-gray-300 rounded-lg">
                     <button
                       onClick={() => setChildren(Math.max(0, children - 1))}
@@ -410,7 +411,7 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
 
               {/* Tour Details */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-700 mb-2">
+                <p className="text-sm text-gray-700 mb-2" style={{ fontFamily: "Urbanist" }}>
                   <strong>Dubai Desert Safari, Dune Bashing, Camel Ride, Barbecue, Entertainment & Dinner</strong>
                 </p>
                 <div className="space-y-1 text-xs text-gray-600">
@@ -422,14 +423,14 @@ export default function AttractionDetail({ attractionId }: AttractionDetailProps
               {/* Price Section */}
               <div className="mb-6 border-t border-gray-200 pt-4">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-gray-700">Total price</span>
-                  <span className="text-2xl font-bold text-gray-900">USD {attraction.price}</span>
+                  <span className="text-gray-700" style={{ fontFamily: "Urbanist" }}>Total price</span>
+                  <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: "Urbanist" }}>USD {attraction.price}</span>
                 </div>
-                <p className="text-xs text-gray-500">Includes all taxes and charges</p>
+                <p className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>Includes all taxes and charges</p>
               </div>
 
               {/* Book Button */}
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors" style={{ fontFamily: "Urbanist" }}>
                 Book Now
               </button>
             </div>

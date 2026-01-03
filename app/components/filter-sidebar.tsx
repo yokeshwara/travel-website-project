@@ -134,7 +134,7 @@ export default function FilterSidebar() {
   return (
     <aside className="lg:col-span-1">
       <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h3 className="text-lg font-semibold text-gray-900 mb-6">Filter by</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-6" style={{ fontFamily: "Urbanist" }}>Filter by</h3>
 
         <div className="space-y-4">
           {filterGroups.map((group) => (
@@ -158,8 +158,8 @@ export default function FilterSidebar() {
                         type="checkbox"
                         className="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary"
                       />
-                      <span className="text-sm text-gray-700">{item.name}</span>
-                      <span className="text-xs text-gray-500 ml-auto">({item.count})</span>
+                      <span className="text-sm text-gray-700" style={{ fontFamily: "Urbanist" }}>{item.name}</span>
+                      <span className="text-xs text-gray-500 ml-auto" style={{ fontFamily: "Urbanist" }}>({item.count})</span>
                     </label>
                   ))}
                 </div>

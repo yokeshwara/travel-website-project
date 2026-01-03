@@ -9,13 +9,13 @@ export function TestimonialSection() {
 
           {/* LEFT CONTENT */}
           <div>
-            <p className="text-sm text-muted-foreground mb-2">Mission and Values</p>
+            <p className="text-sm text-muted-foreground mb-2" style={{ fontFamily: "Urbanist" }}>Mission and Values</p>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: "Urbanist" }}>
               What people says about Golobe facilities
             </h2>
 
-            <div className="space-y-5 text-muted-foreground leading-8 mb-8">
+            <div className="space-y-5 text-muted-foreground leading-8 mb-8" style={{ fontFamily: "Urbanist" }}>
               <p>
                 Our platform is designed for intrepid travelers of all ages and backgrounds who
                 crave immersive experiences, cultural discovery, and off-the-beaten-path adventures.
@@ -37,7 +37,7 @@ export function TestimonialSection() {
                 "Offer Competitive Prices",
                 "Empower Travelers",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
+                <div key={item} className="flex items-center gap-3" style={{ fontFamily: "Urbanist" }}>
                   <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center">
                     <Check className="w-4 h-4" />
                   </div>
@@ -70,7 +70,7 @@ export function TestimonialSection() {
 
             {/* CENTER BLUE BUTTON */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base shadow-lg lg:mt-55">
+              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base shadow-lg lg:mt-55" style={{ fontFamily: "Urbanist" }}>
                 Explore The World
               </Button>
             </div>
