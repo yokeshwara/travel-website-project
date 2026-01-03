@@ -84,7 +84,7 @@ export default function DubaiHotels() {
                     </span>
                   </div>
 
-                  <button className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors">
+                  <button className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors" onClick={()=>router.push(`${'/hotel/1'}`)}>
                     ➜
                   </button>
                 </div>

@@ -103,6 +103,7 @@ export default function StaysPopularHotels() {
                   <Button
                     size="icon"
                     className="rounded-full bg-primary hover:bg-primary/90"
+                    onClick={()=>router.push(`${'/hotel/1'}`)}
                   >
                     <ArrowRight className="h-5 w-5" />
                   </Button>
