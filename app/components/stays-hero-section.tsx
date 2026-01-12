@@ -1,44 +1,52 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import { useRouter } from "next/navigation"
-import { Plane, Bed, Plus, Send } from "lucide-react"
-import Link from "next/link"
-import DatePicker from "@/app/DatePicker"
+import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { Plane, Bed, Plus, Send } from "lucide-react";
+import Link from "next/link";
+import DatePicker from "@/app/DatePicker";
 
 export default function StaysHeroSection() {
-  const router = useRouter()
+  const router = useRouter();
 
-  const [location, setLocation] = useState("")
-  const [people, setPeople] = useState("")
-  const [openDate, setOpenDate] = useState(false)
+  const [location, setLocation] = useState("");
+  const [people, setPeople] = useState("");
+  const [openDate, setOpenDate] = useState(false);
 
-  // ✅ SINGLE SOURCE OF TRUTH
-  const [dateValue, setDateValue] = useState("")
+  // SINGLE SOURCE OF TRUTH
+  const [dateValue, setDateValue] = useState("");
 
-  const dateRef = useRef<HTMLDivElement>(null)
+  const dateRef = useRef<HTMLDivElement>(null);
 
-  /* Close date picker on outside click */
+  /* ================= OUTSIDE CLICK ================= */
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dateRef.current && !dateRef.current.contains(e.target as Node)) {
-        setOpenDate(false)
+        setOpenDate(false);
       }
-    }
-    document.addEventListener("mousedown", handler)
-    return () => document.removeEventListener("mousedown", handler)
-  }, [])
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
 
-  /* Search handler */
+  /* ================= VALIDATION ================= */
+  const isFormValid =
+    location.trim() !== "" &&
+    dateValue.trim() !== "" &&
+    people.trim() !== "";
+
+  /* ================= SEARCH ================= */
   const handleSearch = () => {
+    if (!isFormValid) return;
+
     const params = new URLSearchParams({
       location,
       dates: dateValue,
       people,
-    })
+    });
 
-    router.push(`/searchresults?${params.toString()}`)
-  }
+    router.push(`/searchresults?${params.toString()}`);
+  };
 
   return (
     <section className="relative min-h-[650px] pb-[160px]">
@@ -74,7 +82,7 @@ export default function StaysHeroSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             {/* Location */}
             <div className="relative">
-              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700" style={{ fontFamily: "Urbanist" }}>
+              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700">
                 Stays In
               </label>
               <input
@@ -88,12 +96,12 @@ export default function StaysHeroSection() {
 
             {/* Date Picker */}
             <div className="relative" ref={dateRef}>
-              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700" style={{ fontFamily: "Urbanist" }}>
+              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700">
                 Number of Days
               </label>
               <input
                 readOnly
-                value={dateValue}   
+                value={dateValue}
                 onClick={() => setOpenDate(true)}
                 placeholder="Select dates"
                 className="w-full px-4 py-3 border rounded-lg cursor-pointer"
@@ -102,11 +110,11 @@ export default function StaysHeroSection() {
               {openDate && (
                 <div className="absolute top-[120%] left-0 z-50 w-full lg:w-[720px]">
                   <DatePicker
-                    onApply={(data) => {
+                    onApply={(data: any) => {
                       setDateValue(
-                        `${data.pickupDate} Jun (${data.pickupTime}) - ${data.dropDate} Jun (${data.dropTime})`
-                      )
-                      setOpenDate(false)
+                        `${data.pickupDate} - ${data.dropDate}`
+                      );
+                      setOpenDate(false);
                     }}
                   />
                 </div>
@@ -115,7 +123,7 @@ export default function StaysHeroSection() {
 
             {/* People */}
             <div className="relative">
-              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700" style={{ fontFamily: "Urbanist" }}>
+              <label className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-700">
                 People
               </label>
               <input
@@ -130,14 +138,20 @@ export default function StaysHeroSection() {
 
           {/* Actions */}
           <div className="flex justify-between items-center mt-6">
-            <button className="flex items-center gap-2 text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>
+            <button className="flex items-center gap-2 text-sm text-gray-600">
               <Plus size={16} /> Add Promo Code
             </button>
 
             <button
               onClick={handleSearch}
-              className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg"
-              style={{ fontFamily: "Urbanist" }}
+              disabled={!isFormValid}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg transition
+                ${
+                  isFormValid
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                }
+              `}
             >
               <Send size={16} /> Show Results
             </button>
@@ -145,5 +159,5 @@ export default function StaysHeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

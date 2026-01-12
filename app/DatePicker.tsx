@@ -5,51 +5,106 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface DatePickerProps {
   onApply: (data: {
-    pickupDate: number;
-    dropDate: number;
+    pickupDate: string;
+    dropDate: string;
     pickupTime: string;
     dropTime: string;
-    
   }) => void;
 }
 
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
 export default function DatePicker({ onApply }: DatePickerProps) {
-  const [pickupDate, setPickupDate] = useState(7);
-  const [dropDate, setDropDate] = useState(18);
-  const [pickupTime, setPickupTime] = useState("11:00 AM");
-  const [dropTime, setDropTime] = useState("11:00 AM");
+  const today = new Date();
+
+  const [month, setMonth] = useState(today.getMonth());
+  const [year, setYear] = useState(today.getFullYear());
+
+  const [pickupDay, setPickupDay] = useState<number | null>(null);
+  const [dropDay, setDropDay] = useState<number | null>(null);
+
+  const [pickupTime, setPickupTime] = useState("11:00");
+  const [dropTime, setDropTime] = useState("11:00");
+
+  /* ================= HELPERS ================= */
+
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+
+  const prevMonth = () => {
+    if (month === 0) {
+      setMonth(11);
+      setYear((y) => y - 1);
+    } else {
+      setMonth((m) => m - 1);
+    }
+  };
+
+  const nextMonth = () => {
+    if (month === 11) {
+      setMonth(0);
+      setYear((y) => y + 1);
+    } else {
+      setMonth((m) => m + 1);
+    }
+  };
+
+  const formatDate = (day: number) =>
+    `${day} ${MONTHS[month]} ${year}`;
+
+  /* ================= RENDER ================= */
 
   return (
     <div className="bg-[#f6f8fb] rounded-xl shadow-xl p-6 w-full">
       {/* Calendars */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {[pickupDate, dropDate].map((selected, idx) => (
+
+        {/* PICKUP */}
+        {[pickupDay, dropDay].map((selectedDay, idx) => (
           <div key={idx}>
             <div className="flex justify-between items-center mb-4">
-              <ChevronLeft className="cursor-pointer" />
-              <h3 className="font-medium">June</h3>
-              <ChevronRight className="cursor-pointer" />
+              <ChevronLeft
+                className="cursor-pointer"
+                onClick={prevMonth}
+              />
+              <h3 className="font-medium">
+                {MONTHS[month]} {year}
+              </h3>
+              <ChevronRight
+                className="cursor-pointer"
+                onClick={nextMonth}
+              />
             </div>
 
+            {/* Weekdays */}
             <div className="grid grid-cols-7 text-xs text-center text-gray-500 mb-2">
-              {["SUN","MON","TUE","WED","THU","FRI","SAT"].map(d => (
+              {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((d) => (
                 <span key={d}>{d}</span>
               ))}
             </div>
 
+            {/* Dates */}
             <div className="grid grid-cols-7 gap-2 text-center">
-              {[...Array(30)].map((_, i) => {
+              {/* Empty slots */}
+              {[...Array(firstDayOfMonth)].map((_, i) => (
+                <span key={`empty-${i}`} />
+              ))}
+
+              {/* Days */}
+              {[...Array(daysInMonth)].map((_, i) => {
                 const day = i + 1;
-                const active =
-                  idx === 0 ? day === pickupDate : day === dropDate;
+                const active = selectedDay === day;
 
                 return (
                   <button
                     key={day}
                     onClick={() =>
                       idx === 0
-                        ? setPickupDate(day)
-                        : setDropDate(day)
+                        ? setPickupDay(day)
+                        : setDropDay(day)
                     }
                     className={`py-2 rounded-md text-sm ${
                       active
@@ -89,14 +144,16 @@ export default function DatePicker({ onApply }: DatePickerProps) {
         </div>
 
         <button
-          onClick={() =>
+          onClick={() => {
+            if (!pickupDay || !dropDay) return;
+
             onApply({
-              pickupDate,
-              dropDate,
+              pickupDate: formatDate(pickupDay),
+              dropDate: formatDate(dropDay),
               pickupTime,
               dropTime,
-            })
-          }
+            });
+          }}
           className="bg-blue-600 text-white py-3 rounded-lg mt-6 md:mt-0"
         >
           Apply

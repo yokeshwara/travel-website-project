@@ -20,28 +20,41 @@ export default function HeroSection() {
   const [openDate, setOpenDate] = useState(false);
   const [openPassenger, setOpenPassenger] = useState(false);
 
-  const [dateValue, setDateValue] = useState("07 June 22 - 18 June 22");
-  const [from, setFrom] = useState("Dubai");
-  const [to, setTo] = useState("England");
+  const [dateValue, setDateValue] = useState("");
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
 
-  const [travelClass, setTravelClass] = useState("Economy");
+  const [tripType, setTripType] = useState<"Return" | "One Way">("Return");
+
+  const [travelClass] = useState("Economy");
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
 
   const passengerRef = useRef<HTMLDivElement>(null);
+  const dateRef = useRef<HTMLDivElement>(null);
 
   const swapLocations = () => {
     setFrom(to);
     setTo(from);
   };
 
+  /* ================= VALIDATION ================= */
+  const isFormValid =
+    from.trim() !== "" &&
+    to.trim() !== "" &&
+    dateValue.trim() !== "" &&
+    adults + children > 0;
+
+  /* ================= SEARCH ================= */
   const handleSearch = () => {
+    if (!isFormValid) return;
+
     router.push(
-      `/flights?from=${from}&to=${to}&date=${dateValue}&adults=${adults}&children=${children}&class=${travelClass}`
+      `/flights?from=${from}&to=${to}&date=${dateValue}&trip=${tripType}&adults=${adults}&children=${children}&class=${travelClass}`
     );
   };
 
-  // Close popup on outside click
+  /* ================= OUTSIDE CLICK ================= */
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -50,7 +63,15 @@ export default function HeroSection() {
       ) {
         setOpenPassenger(false);
       }
+
+      if (
+        dateRef.current &&
+        !dateRef.current.contains(e.target as Node)
+      ) {
+        setOpenDate(false);
+      }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -64,17 +85,18 @@ export default function HeroSection() {
       </div>
 
       {/* Search Card */}
-    <div className="relative z-10 flex justify-center"> 
-    <div className="relative mt-[420px] w-[95%] max-w-6xl bg-white rounded-2xl shadow-xl p-6 lg:absolute lg:mt-0 lg:top-[580px]">
+      <div className="relative z-10 flex justify-center">
+        <div className="relative mt-[420px] w-[95%] max-w-6xl bg-white rounded-2xl shadow-xl p-6 lg:absolute lg:mt-0 lg:top-[580px]">
+
           {/* Tabs */}
-          <div className="flex gap-8 border-b mb-6" style={{ fontFamily: "Urbanist" }}>
+          <div className="flex gap-8 border-b mb-6">
             <Link href="/" className="flex items-center gap-2 pb-3 border-b-2 border-blue-600 text-blue-600 font-medium">
               <Plane size={18} /> Flights
             </Link>
             <Link href="/find-stays" className="flex items-center gap-2 pb-3 text-gray-500">
               <Bed size={18} /> Stays
             </Link>
-              <Link href="/attractions" className="flex items-center gap-2 pb-3 text-gray-500">
+            <Link href="/attractions" className="flex items-center gap-2 pb-3 text-gray-500">
               <Plane size={18} /> Attractions
             </Link>
           </div>
@@ -84,7 +106,7 @@ export default function HeroSection() {
 
             {/* From - To */}
             <div className="relative border rounded-lg px-4 pt-4 pb-3">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
                 From - To
               </span>
               <div className="flex items-center gap-2">
@@ -92,11 +114,13 @@ export default function HeroSection() {
                   value={from}
                   onChange={(e) => setFrom(e.target.value)}
                   className="w-full font-medium outline-none"
+                  placeholder="From"
                 />
                 <input
                   value={to}
                   onChange={(e) => setTo(e.target.value)}
                   className="w-full font-medium outline-none"
+                  placeholder="To"
                 />
                 <button onClick={swapLocations}>
                   <ArrowLeftRight size={18} />
@@ -106,24 +130,37 @@ export default function HeroSection() {
 
             {/* Trip */}
             <div className="relative border rounded-lg px-4 pt-4 pb-3">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
                 Trip
               </span>
-              <p className="font-medium" style={{ fontFamily: "Urbanist" }}>Return</p>
+              <select
+                value={tripType}
+                onChange={(e) => setTripType(e.target.value as any)}
+                className="w-full font-medium outline-none bg-transparent"
+              >
+                <option value="Return">Return</option>
+                <option value="One Way">One Way</option>
+              </select>
             </div>
 
             {/* Date */}
-            <div className="relative border rounded-lg px-4 pt-4 pb-3 cursor-pointer">
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
+            <div
+              ref={dateRef}
+              className="relative border rounded-lg px-4 pt-4 pb-3 cursor-pointer"
+            >
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
                 Depart - Return
               </span>
-              <p onClick={() => setOpenDate(!openDate)}>{dateValue}</p>
+
+              <p onClick={() => setOpenDate(true)}>
+                {dateValue || "Select dates"}
+              </p>
 
               {openDate && (
                 <div className="absolute top-[120%] left-0 z-50 w-full lg:w-[720px]">
                   <DatePicker
                     onApply={(data: any) => {
-                      setDateValue(`${data.pickupDate} Jun - ${data.dropDate} Jun`);
+                      setDateValue(`${data.pickupDate} - ${data.dropDate}`);
                       setOpenDate(false);
                     }}
                   />
@@ -137,51 +174,29 @@ export default function HeroSection() {
               className="relative border rounded-lg px-4 pt-4 pb-3 cursor-pointer"
               onClick={() => setOpenPassenger(!openPassenger)}
             >
-              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>
+              <span className="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">
                 Passenger - Class
               </span>
 
               <div className="flex justify-between items-center">
-                <p className="font-medium" style={{ fontFamily: "Urbanist" }}>
+                <p className="font-medium">
                   {adults + children} Passenger, {travelClass}
                 </p>
                 <ChevronDown size={18} />
               </div>
 
-              {/* Dropdown */}
               {openPassenger && (
                 <div className="absolute top-[120%] right-0 w-full sm:w-[340px] bg-[#f7f9fc] rounded-xl shadow-lg p-4 z-50">
 
-                  {/* Class */}
-                  <div className="border rounded-lg bg-white p-3 mb-4 flex justify-between">
-                    <span>{travelClass}</span>
-                    <ChevronDown size={18} />
-                  </div>
-
                   {/* Adults */}
                   <div className="flex justify-between items-center mb-4">
-                    <div>
-                      <p className="font-semibold" style={{ fontFamily: "Urbanist" }}>Adults</p>
-                      <p className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>Aged 16+</p>
-                    </div>
+                    <p className="font-semibold">Adults</p>
                     <div className="flex items-center gap-3">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setAdults(Math.max(1, adults - 1));
-                        }}
-                        className="w-8 h-8 rounded bg-white shadow flex items-center justify-center"
-                      >
+                      <button onClick={(e) => { e.stopPropagation(); setAdults(Math.max(1, adults - 1)); }}>
                         <Minus size={14} />
                       </button>
                       <span>{adults}</span>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setAdults(adults + 1);
-                        }}
-                        className="w-8 h-8 rounded bg-white shadow flex items-center justify-center"
-                      >
+                      <button onClick={(e) => { e.stopPropagation(); setAdults(adults + 1); }}>
                         <Plus size={14} />
                       </button>
                     </div>
@@ -189,73 +204,48 @@ export default function HeroSection() {
 
                   {/* Children */}
                   <div className="flex justify-between items-center mb-6">
-                    <div>
-                      <p className="font-semibold" style={{ fontFamily: "Urbanist" }}>Children</p>
-                      <p className="text-xs text-gray-500" style={{ fontFamily: "Urbanist" }}>Aged 0–15</p>
-                    </div>
+                    <p className="font-semibold">Children</p>
                     <div className="flex items-center gap-3">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setChildren(Math.max(0, children - 1));
-                        }}
-                        className="w-8 h-8 rounded bg-white shadow flex items-center justify-center"
-                      >
+                      <button onClick={(e) => { e.stopPropagation(); setChildren(Math.max(0, children - 1)); }}>
                         <Minus size={14} />
                       </button>
                       <span>{children}</span>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setChildren(children + 1);
-                        }}
-                        className="w-8 h-8 rounded bg-white shadow flex items-center justify-center"
-                      >
+                      <button onClick={(e) => { e.stopPropagation(); setChildren(children + 1); }}>
                         <Plus size={14} />
                       </button>
                     </div>
                   </div>
 
-                  {/* Info */}
-                  <p className="text-sm leading-relaxed text-gray-600 mb-4" style={{ fontFamily: "Urbanist" }}>
-                   Your age at time of travel must be valid for the age category booked.
-                   Airlines have restrictions on under 18s travelling alone.
-                  </p>
-
-                   <p className="text-sm leading-relaxed text-gray-600 mb-6"style={{ fontFamily: "Urbanist" }}>
-                    Age limits and policies for travelling with children may vary so please
-                    check with the airline before booking.
-                   </p>
-
-
-                  {/* Apply */}
-                 <button
-  onClick={(e) => {
-    e.stopPropagation();
-    setOpenPassenger(false);
-    router.push("/PassengerDetails");
-  }}
-  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold"
-  style={{ fontFamily: "Urbanist" }}
->
-  Apply
-</button>
-
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setOpenPassenger(false);
+                    }}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold"
+                  >
+                    Apply
+                  </button>
                 </div>
               )}
             </div>
           </div>
 
           {/* Actions */}
-          <div className="flex justify-between items-center mt-6 lg:ml-190">
-            <button className="flex items-center gap-2 text-sm text-gray-600" style={{ fontFamily: "Urbanist" }}>
+          <div className="flex justify-between items-center mt-6">
+            <button className="flex items-center gap-2 text-sm text-gray-600">
               <Plus size={16} /> Add Promo Code
             </button>
 
             <button
               onClick={handleSearch}
-              className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg"
-              style={{ fontFamily: "Urbanist" }}
+              disabled={!isFormValid}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg transition
+                ${
+                  isFormValid
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                }
+              `}
             >
               <Send size={16} /> Show Flights
             </button>
