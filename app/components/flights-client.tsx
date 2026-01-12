@@ -32,7 +32,7 @@ export default function FlightClient() {
   })
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 lg:mt-50">
         {/* <HeroSection/> */}
       {/* Header */}
       <header className="bg-blue-600 text-white px-4 py-4 md:px-6">
