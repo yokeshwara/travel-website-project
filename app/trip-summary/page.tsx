@@ -36,12 +36,12 @@ export default function TravelBooking() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <NewHeader/>
 
       {/* Main Content */}
-     <main className="w-full px-4 py-8 overflow-hidden">
+     <main className="w-full px-8 py-8 overflow-hidden">
         <div className="bg-blue-50 rounded-xl shadow-lg p-6 md:p-8 ">
           {/* Trip Summary */}
           <section className="mb-8" >

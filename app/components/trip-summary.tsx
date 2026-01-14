@@ -3,7 +3,7 @@ import { Plane } from "lucide-react"
 
 export function TripSummary() {
   return (
-    <Card className="p-6 sticky top-4 border-none bg-card">
+    <Card className="p-6 sticky top-4 border-none bg-[#ECF3FF]">
       <h2 className="text-lg font-semibold mb-6 pb-4 border-b" style={{ fontFamily: "Urbanist" }}>Your trip summary</h2>
 
       {/* Outbound Flight */}

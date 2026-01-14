@@ -6,15 +6,17 @@ import { Card } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Slider } from "@/components/ui/slider"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 
 import { Footer } from "../components/footer";
 import  HeroSection  from "../components/hero-section";
 import { Newsletter } from "./newsletter";
 
+
 export default function FlightClient() {
 
       const params = useSearchParams();
+      const router = useRouter()
 
   const from = params.get("from");
   const to = params.get("to");
@@ -30,6 +32,10 @@ export default function FlightClient() {
 
     
   })
+
+      const bookNow = () => {
+        router.push("/PassengerDetails") // change route as needed
+      }
 
   return (
     <div className="min-h-screen bg-gray-50 lg:mt-50">
@@ -165,7 +171,7 @@ export default function FlightClient() {
                   {/* Price & Book Button */}
                   <div className="flex md:flex-col items-center md:items-end justify-between md:justify-start gap-3 w-full md:w-auto md:min-w-[120px]">
                     <div className="text-2xl font-bold" style={{ fontFamily: "Urbanist" }}>{flight.price}</div>
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6" style={{ fontFamily: "Urbanist" }}>Book Now</Button>
+                    <Button  onClick={bookNow} className="bg-blue-600 hover:bg-blue-700 text-white px-6" style={{ fontFamily: "Urbanist" }}>Book Now</Button>
                   </div>
                 </div>
               </Card>

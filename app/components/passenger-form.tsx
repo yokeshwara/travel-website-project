@@ -17,7 +17,7 @@ export function PassengerForm() {
   return (
     <div className="space-y-6">
       {/* Benefits Card */}
-      <Card className="p-6 bg-secondary border-none">
+      <Card className="p-6 bg-[#ECF3FF] border-none">
         <p className="text-sm font-medium mb-4" style={{ fontFamily: "Urbanist" }}>Log in to your account to unlock extra benefits</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3">
@@ -42,7 +42,7 @@ export function PassengerForm() {
       </Card>
 
       {/* Passenger 1 Form */}
-      <Card className="p-6 border-none bg-secondary">
+      <Card className="p-6 border-none bg-[#ECF3FF]">
         <h2 className="text-lg font-semibold mb-6" style={{ fontFamily: "Urbanist" }}>Passenger 1 (Adult)</h2>
 
         {/* Title Selection */}
@@ -145,7 +145,7 @@ export function PassengerForm() {
       </Card>
 
       {/* Passenger 2 */}
-      <Card className="p-6 border-none bg-secondary">
+      <Card className="p-6 border-none bg-[#ECF3FF]">
         <button
           onClick={() => setExpanded(expanded === 2 ? 0 : 2)}
           className="w-full flex items-center justify-between"
@@ -157,7 +157,7 @@ export function PassengerForm() {
       </Card>
 
       {/* Contact Details */}
-      <Card className="p-6 border-none bg-secondary">
+      <Card className="p-6 border-none bg-[#ECF3FF]">
         <h2 className="text-lg font-semibold mb-2" style={{ fontFamily: "Urbanist" }}>Contact Details</h2>
         <p className="text-sm text-muted-foreground mb-6" style={{ fontFamily: "Urbanist" }}>
           Please provide your contact details so that we can notify you the updates on your flight
@@ -209,7 +209,7 @@ export function PassengerForm() {
       </Card>
 
       {/* Promotional Section */}
-      <Card className="p-0 border-none bg-secondary overflow-hidden">
+      <Card className="p-0 border-none bg-[#ECF3FF] overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
             <img src="/passenger-details-image.png" alt="London" className="w-full h-full object-cover" />
